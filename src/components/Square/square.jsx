@@ -1,9 +1,10 @@
 import React from "react";
+import s from "./square.module.css";
 
 class Square extends React.Component {
     render() {
         return (
-            <button className="square">
+            <button className={s.square}>
                 {this.props.value}
             </button>
         );

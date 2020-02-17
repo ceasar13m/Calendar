@@ -1,52 +1,58 @@
 import React, {Component} from "react";
 import Square from "./Square/square";
+import DaysOfTheWeek from "./Table/daysOfTheWeek";
 
+
+/**
+ * Компанента возвращает таблицу календаря
+ * В пропсах получает год и месяц
+ */
 
 class Calendar extends Component {
+
     createCalendar = (year, month) => {
         let mon = month - 1;
         let date = new Date(year, mon);
 
-        const list = [];
+        const weeks = []; //Весь месяц
 
-        list.push(
-            <div className="board-row">
-                <Square value="Пн"/>
-                <Square value="Вт"/>
-                <Square value="Ср"/>
-                <Square value="Чт"/>
-                <Square value="Пт"/>
-                <Square value="Сб"/>
-                <Square value="Вс"/>
-            </div>
+        //Первая строка таблицы календаря - названия дней недели
+        weeks.push(
+            <DaysOfTheWeek />
         );
 
-        let temp = [];
+        let week = []; //Одна неделя
 
+
+        //Заполняем таблицу до начала месяца
         for (let i = 0; i < this.getDay(date); i++) {
-            temp.push(<Square value=" "/>);
+            week.push(<Square value=" "/>);
         }
 
 
+        //Создает недели и добавляем в массив месяца
         while (date.getMonth() === mon) {
-            temp.push(<Square value={date.getDate()}/>);
+            week.push(<Square value={date.getDate()}/>);
             if (this.getDay(date) % 7 === 6) {
-                list.push(<div className="board-row">{temp}</div>);
-                temp = [];
+                weeks.push(<div className="board-row">{week}</div>);
+                week = [];
             }
 
             date.setDate(date.getDate() + 1);
         }
 
-        list.push(<div className="board-row">{temp}</div>);
+        //Без этой строчки не всегда отрисовывает последнюю неделю
+        //Нжно разобраться
+        weeks.push(<div className="board-row">{week}</div>);
 
+        //Заполняет  таблицу до конца строки пустыми ячейками
         if (this.getDay(date) !== 0) {
             for (let i = this.getDay(date); i < 7; i++) {
-                temp.push(<Square value=" "/>);
+                week.push(<Square value=" "/>);
             }
         }
 
-        return list;
+        return weeks;
 
     }
 
@@ -59,7 +65,7 @@ class Calendar extends Component {
 
 
     render() {
-        return (this.createCalendar(1991, 3));
+        return (this.createCalendar(this.props.dataController.getState().year, this.props.dataController.getState().month));
     }
 
 }
