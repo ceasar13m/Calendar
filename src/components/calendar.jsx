@@ -3,59 +3,62 @@ import React, {Component} from "react";
 
 class Calendar extends Component {
     render() {
+
         function createCalendar(year, month) {
             let mon = month - 1;
             let date = new Date(year, mon);
 
-            let table = '<table> ' +
-                '<tr> ' +
-                '<th> пн </th>' +
-                '<th> вт </th>' +
-                '<th> ср </th>' +
-                '<th> чт </th>' +
-                '<th> пт </th>' +
-                '<th> сб </th>' +
-                '<th> вс </th>' +
-                '</tr>' +
-                '<tr>';
+            const list = [];
 
+            list.push(
+                <div className="board-row">
+                    <div>Пн</div>
+                    <div>Вт</div>
+                    <div>Ср</div>
+                    <div>Чт</div>
+                    <div>Пт</div>
+                    <div>Сб</div>
+                    <div>Вс</div>
+                </div>
+            );
+
+            let temp = [];
 
             for (let i = 0; i < getDay(date); i++) {
-                table += '<td></td>';
+                temp.push(<div>-</div>);
             }
+
 
             while (date.getMonth() == mon) {
-                table += '<td>' + date.getDate() + '</td>';
-                if (getDay(date) % 7 == 6) { // вс, последний день - перевод строки
-                    table += '</tr><tr>';
+                temp.push(<div>date.getDate()<div>);
+                if (getDay(date) % 7 == 6) {
+                    list.push(<div className="board-row">temp</div>);
                 }
-                date.setDate(date.getDate() + 1);
+                        date.setDate(date.getDate() + 1);
             }
 
-            if (getDay(date) != 0) {
-                for (let i = getDay(date); i < 7; i++) {
-                    table += '<td></td>';
+
+             if (getDay(date) != 0) {
+                 for (let i = getDay(date); i < 7; i++) {
+
+                  }
                 }
-            }
 
-            table += '</tr></table>';
+                        return list;
 
-            return table;
+                        }
 
-        }
+                        function getDay(date) {
+                            let day = date.getDay();
+                            if (day == 0)
+                            day = 7;
+                            return day - 1;
+                        }
 
-        function getDay(date) {
-            let day = date.getDay();
-            if (day == 0) day = 7;
-            return day - 1;
-        }
+                        return ( createCalendar(2020, 2) );
+                        }
+                        }
+                        }
 
 
-
-        return (
-            createCalendar(2012, 9)
-        );
-    }
-}
-
-export default Calendar;
+                        export default Calendar;
