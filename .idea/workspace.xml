@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ad33f94e-3a00-4f36-b598-208d472f6646" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Square/square.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Table/table.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/calendar.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/calendar.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/calendar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/calendar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +19,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="ProjectId" id="1WcqUQHLoRYaA45IDcUczFXhK31" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -87,42 +83,51 @@
       <workItem from="1579459247260" duration="2943000" />
       <workItem from="1579463261251" duration="1668000" />
       <workItem from="1579522560077" duration="2027000" />
-      <workItem from="1581862065317" duration="6480000" />
-      <workItem from="1581917065998" duration="8789000" />
+      <workItem from="1581862065317" duration="6599000" />
+      <workItem from="1581942803067" duration="55000" />
+      <workItem from="1581942873024" duration="3362000" />
     </task>
+    <task id="LOCAL-00001" summary="0.1">
+      <created>1581879752682</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1581879752682</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="0.1" />
+    <option name="LAST_COMMIT_MESSAGE" value="0.1" />
   </component>
   <component name="WindowStateProjectService">
     <state x="690" y="271" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1581868670234">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="271" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581868670234" />
-    <state x="277" y="0" key="CommitChangelistDialog2" timestamp="1581938823085">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="277" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1581938823085" />
-    <state width="1259" height="163" key="GridCell.Tab.0.bottom" timestamp="1581917244710">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="1259" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1581917244710" />
-    <state width="1259" height="163" key="GridCell.Tab.0.center" timestamp="1581917244710">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="1259" height="163" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1581917244710" />
-    <state width="1259" height="163" key="GridCell.Tab.0.left" timestamp="1581917244710">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="1259" height="163" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1581917244710" />
-    <state width="1259" height="163" key="GridCell.Tab.0.right" timestamp="1581917244710">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="1259" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1581917244710" />
-    <state x="771" y="440" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1581862635808">
+    <state x="598" y="119" key="CommitChangelistDialog2" timestamp="1581879770842">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="771" y="440" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1581862635808" />
+    <state x="598" y="119" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1581879770842" />
+    <state x="841" y="419" width="261" height="201" key="Github.ShareDialog" timestamp="1581879844711">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="841" y="419" width="261" height="201" key="Github.ShareDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581879844711" />
+    <state x="672" y="238" key="MultipleFileMergeDialog" timestamp="1581943000431">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="672" y="238" key="MultipleFileMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581943000431" />
+    <state x="552" y="257" key="Vcs.Push.Dialog.v2" timestamp="1581879813067">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="257" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1581879813067" />
+    <state x="771" y="440" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1581942990559">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="771" y="440" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1581942990559" />
   </component>
 </project>
