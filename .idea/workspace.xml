@@ -85,7 +85,7 @@
       <workItem from="1579522560077" duration="2027000" />
       <workItem from="1581862065317" duration="6599000" />
       <workItem from="1581942803067" duration="55000" />
-      <workItem from="1581942873024" duration="3362000" />
+      <workItem from="1581942873024" duration="6686000" />
     </task>
     <task id="LOCAL-00001" summary="0.1">
       <created>1581879752682</created>
@@ -94,7 +94,14 @@
       <option name="project" value="LOCAL" />
       <updated>1581879752682</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="0.2">
+      <created>1581962428632</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1581962428632</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -102,17 +109,18 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="0.1" />
-    <option name="LAST_COMMIT_MESSAGE" value="0.1" />
+    <MESSAGE value="0.2" />
+    <option name="LAST_COMMIT_MESSAGE" value="0.2" />
   </component>
   <component name="WindowStateProjectService">
     <state x="690" y="271" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1581868670234">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="271" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581868670234" />
-    <state x="598" y="119" key="CommitChangelistDialog2" timestamp="1581879770842">
+    <state x="598" y="119" key="CommitChangelistDialog2" timestamp="1581962427804">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="598" y="119" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1581879770842" />
+    <state x="598" y="119" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1581962427804" />
     <state x="841" y="419" width="261" height="201" key="Github.ShareDialog" timestamp="1581879844711">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -121,10 +129,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="672" y="238" key="MultipleFileMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581943000431" />
-    <state x="552" y="257" key="Vcs.Push.Dialog.v2" timestamp="1581879813067">
+    <state x="552" y="257" key="Vcs.Push.Dialog.v2" timestamp="1581962439797">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="257" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1581879813067" />
+    <state x="552" y="257" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1581962439797" />
     <state x="771" y="440" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1581942990559">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

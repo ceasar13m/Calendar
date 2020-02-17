@@ -11,25 +11,25 @@ class Calendar extends Component {
 
         list.push(
             <div className="board-row">
-                <Square value = "Пн"/>
-                <Square value = "Вт"/>
-                <Square value = "Ср"/>
-                <Square value = "Чт"/>
-                <Square value = "Пт"/>
-                <Square value = "Сб"/>
-                <Square value = "Вс"/>
+                <Square value="Пн"/>
+                <Square value="Вт"/>
+                <Square value="Ср"/>
+                <Square value="Чт"/>
+                <Square value="Пт"/>
+                <Square value="Сб"/>
+                <Square value="Вс"/>
             </div>
         );
 
         let temp = [];
 
         for (let i = 0; i < this.getDay(date); i++) {
-            temp.push(<Square value = "-"/>);
+            temp.push(<Square value=" "/>);
         }
 
 
         while (date.getMonth() === mon) {
-            temp.push(<Square value = {date.getDate()}/>);
+            temp.push(<Square value={date.getDate()}/>);
             if (this.getDay(date) % 7 === 6) {
                 list.push(<div className="board-row">{temp}</div>);
                 temp = [];
@@ -38,10 +38,11 @@ class Calendar extends Component {
             date.setDate(date.getDate() + 1);
         }
 
+        list.push(<div className="board-row">{temp}</div>);
 
         if (this.getDay(date) !== 0) {
             for (let i = this.getDay(date); i < 7; i++) {
-                temp.push(<div>-</div>);
+                temp.push(<Square value=" "/>);
             }
         }
 
@@ -57,9 +58,8 @@ class Calendar extends Component {
     }
 
 
-
     render() {
-        return (this.createCalendar(2020, 2));
+        return (this.createCalendar(1991, 3));
     }
 
 }
