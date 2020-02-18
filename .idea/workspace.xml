@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ad33f94e-3a00-4f36-b598-208d472f6646" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Table/daysOfWeek.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Table/daysOfWeek.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/calendar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/calendar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/navigationButtons/rightButton/rightButton.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navigationButtons/rightButton/rightButton.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/dataController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/dataController.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="ProjectId" id="1WcqUQHLoRYaA45IDcUczFXhK31" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path" value="node" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\muhar\WebstormProjects\claendar\src\components\navigationButtons\rightButton" />
+      <recent name="C:\Users\muhar\WebstormProjects\claendar\src\components\navigationButtons\leftButton" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.npm start">
+    <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
+      <method v="2" />
+    </configuration>
+    <configuration name="npm start" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ad33f94e-3a00-4f36-b598-208d472f6646" name="Default Changelist" comment="" />
+      <created>1579459245510</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1579459245510</updated>
+      <workItem from="1579459247260" duration="2943000" />
+      <workItem from="1579463261251" duration="1668000" />
+      <workItem from="1579522560077" duration="2027000" />
+      <workItem from="1581862065317" duration="6599000" />
+      <workItem from="1581942803067" duration="55000" />
+      <workItem from="1581942873024" duration="9535000" />
+      <workItem from="1581973773049" duration="4962000" />
+      <workItem from="1582031194512" duration="2867000" />
+    </task>
+    <task id="LOCAL-00001" summary="0.1">
+      <created>1581879752682</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1581879752682</updated>
+    </task>
+    <task id="LOCAL-00002" summary="0.2">
+      <created>1581962428632</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1581962428632</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Работает вывод таблицы&#10;Тесты пока багов не выявили">
+      <created>1581969215411</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1581969215411</updated>
+    </task>
+    <task id="LOCAL-00004" summary="0.3&#10;&#10;Добавлены кнопки для смены месяцев справа и слева от календаря. Не работают &#10;Добавлены некоторые минимальные стили">
+      <created>1581978783140</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1581978783140</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="0.1" />
+    <MESSAGE value="0.2" />
+    <MESSAGE value="Работает вывод таблицы&#10;Тесты пока багов не выявили" />
+    <MESSAGE value="0.3&#10;&#10;Добавлены кнопки для смены месяцев справа и слева от календаря. Не работают &#10;Добавлены некоторые минимальные стили" />
+    <option name="LAST_COMMIT_MESSAGE" value="0.3&#10;&#10;Добавлены кнопки для смены месяцев справа и слева от календаря. Не работают &#10;Добавлены некоторые минимальные стили" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="714" y="331" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1581976816787">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="714" y="331" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1581976816787" />
+    <state x="690" y="271" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1581868670234">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="271" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581868670234" />
+    <state x="598" y="119" key="CommitChangelistDialog2" timestamp="1581978782155">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="598" y="119" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1581978782155" />
+    <state x="841" y="419" width="261" height="201" key="Github.ShareDialog" timestamp="1581879844711">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="841" y="419" width="261" height="201" key="Github.ShareDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581879844711" />
+    <state x="672" y="238" key="MultipleFileMergeDialog" timestamp="1581943000431">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="672" y="238" key="MultipleFileMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581943000431" />
+    <state x="552" y="257" key="Vcs.Push.Dialog.v2" timestamp="1581978790598">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="257" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1581978790598" />
+    <state x="771" y="440" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1581942990559">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="771" y="440" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1581942990559" />
+  </component>
+</project>
