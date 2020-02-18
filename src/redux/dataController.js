@@ -1,7 +1,7 @@
 
 
 let state = {
-    date: new Date(2020, 3)
+    date: new Date()
 };
 
 
@@ -13,17 +13,17 @@ class DataController {
 
 
     monthIncr() {
-        state.date = new Date(state.date.getFullYear(), state.date.getMonth() + 1);
+        state.date = new Date(2020, state.date.getMonth() + 1);
         this.App.onDataChanged(state);
     }
 
     monthDecr() {
-        state.date = new Date(state.date.getFullYear(), state.date.getMonth() - 1);
+        state.date = new Date(2020, state.date.getMonth() - 1);
         this.App.onDataChanged(state);
     }
 
     stateUpdate() {
-        this.getState().setState({date: state.date});
+        // this.getState().setState({date: state.date});
     }
 
     getState() {

@@ -10,10 +10,10 @@ import DaysOfTheWeek from "./Table/daysOfTheWeek";
 
 class Calendar extends Component {
 
-    createCalendar = (dateParam) => {
-        let mon = dateParam.getMonth() - 1;
-        let date = dateParam;
-
+    createCalendar = (date) => {
+        debugger;
+        let mon = date.getMonth();
+        debugger;
         const weeks = []; //Весь месяц
 
         //Первая строка таблицы календаря - названия дней недели
@@ -58,6 +58,7 @@ class Calendar extends Component {
 
     getDay = (date) => {
         let day = date.getDay();
+        debugger;
         if (day === 0)
             day = 7;
         return day - 1;
@@ -65,7 +66,7 @@ class Calendar extends Component {
 
 
     render() {
-        return (this.createCalendar(this.props.dataController.getState().date));
+        return (this.createCalendar(this.props.date));
     }
 
 }
