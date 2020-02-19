@@ -2,16 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ad33f94e-3a00-4f36-b598-208d472f6646" name="Default Changelist" comment="0.6&#10;&#10;Работает кнопка &quot;Вперед&quot;&#10;Кнопка &quot;Назад&quot; работает как кнопка &quot;Вперед&quot;">
-      <change afterPath="$PROJECT_DIR$/src/components/selectDate/MonthName.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/calendar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/calendar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Square/square.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Square/square.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/calendar.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/calendar.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/navigationButtons/leftButton/leftButton.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navigationButtons/leftButton/leftButton.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/navigationButtons/leftButton/leftButton.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navigationButtons/leftButton/leftButton.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/navigationButtons/rightButton/rightButton.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navigationButtons/rightButton/rightButton.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/navigationButtons/rightButton/rightButton.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navigationButtons/rightButton/rightButton.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/selectDate/selectDate.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/selectDate/MonthName.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/dataController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/dataController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/selectDate/MonthName.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/selectDate/MonthName.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/selectDate/MonthName.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/selectDate/MonthName.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,6 +109,7 @@
       <workItem from="1582031194512" duration="6820000" />
       <workItem from="1582116881026" duration="1949000" />
       <workItem from="1582136054029" duration="7176000" />
+      <workItem from="1582152014010" duration="777000" />
     </task>
     <task id="LOCAL-00001" summary="0.1">
       <created>1581879752682</created>
@@ -163,6 +166,17 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="0.1" />
     <MESSAGE value="0.2" />
@@ -190,6 +204,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="841" y="419" width="261" height="201" key="Github.ShareDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582053487778" />
+    <state width="1259" height="212" key="GridCell.Tab.0.bottom" timestamp="1582152594615">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1259" height="212" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1582152594615" />
+    <state width="1259" height="212" key="GridCell.Tab.0.center" timestamp="1582152594614">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1259" height="212" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1582152594614" />
+    <state width="1259" height="212" key="GridCell.Tab.0.left" timestamp="1582152594613">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1259" height="212" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1582152594613" />
+    <state width="1259" height="212" key="GridCell.Tab.0.right" timestamp="1582152594614">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1259" height="212" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1582152594614" />
     <state x="672" y="238" key="MultipleFileMergeDialog" timestamp="1582053368423">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -198,9 +228,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="257" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1582111556335" />
-    <state x="771" y="440" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1581942990559">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="514" y="338" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1582152796657">
+      <screen x="0" y="0" width="1280" height="800" />
     </state>
+    <state x="514" y="338" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.800@0.0.1280.800" timestamp="1582152796657" />
     <state x="771" y="440" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1581942990559" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1582138607442">
       <screen x="0" y="0" width="1920" height="1040" />

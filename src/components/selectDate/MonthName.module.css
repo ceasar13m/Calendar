@@ -1,3 +1,13 @@
 .month {
+    display: flex;
+    justify-content: center;
+    height: 20vh;
+    margin: 0;
+    line-height: 20vh;
 
+    font-size: 20px;
+}
+
+.monthName {
+    padding-right: 10px;
 }
