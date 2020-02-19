@@ -15,8 +15,11 @@ class RightButton extends Component {
 
     render() {
         return (
-            <div className={s.rightButton} >
-                <input type="button" value="Вперед" onClick={this.click}/>
+            <div className={s.rightButton} onClick={this.click} >
+                <p>
+                    Вперед >
+                </p>
+
             </div>
         )
     };

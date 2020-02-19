@@ -10,13 +10,13 @@ class LeftButton extends Component {
 
     click = () => {
         this.props.dataController.monthDecr();
-    }
+    };
 
 
     render() {
         return (
-            <div className={s.leftButton} >
-                <input className={s.button} type="button" value="Назад" onClick={this.click} />
+            <div className={s.leftButton} onClick={this.click}>
+                <p> &lt; Назад</p>
             </div>
         )
     };

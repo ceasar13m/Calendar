@@ -1,3 +1,21 @@
-.leftButton {
-
+p {
+    margin: 0;
 }
+.leftButton {
+    width: 15vw;
+    height: 80vh;
+    transition: background-color, opacity 0.3s linear;
+    line-height: 80vh;
+    font-size: 30px;
+    text-align: center;
+    opacity: 0.3;
+}
+
+.leftButton:hover {
+    width: 15vw;
+    height: 80vh;
+    background-color: rgba(0, 0, 0, 0.2);
+    opacity: 1;
+    cursor: pointer;
+}
+

@@ -6,26 +6,26 @@ class MonthName extends Component{
     render() {
 
         const monthNames = [
-            "January",
-            "February",
-            "March",
-            "April",
-            "May",
-            "June",
-            "July",
-            "August",
-            "September",
-            "October",
-            "November",
-            "December"
+            "Январь",
+            "Февраль",
+            "Март",
+            "Апрель",
+            "Май",
+            "Июнь",
+            "Июль",
+            "Август",
+            "Сентябрь",
+            "Октябрь",
+            "Ноябрь",
+            "Декабрь"
         ];
 
 
         return (
             <div className={s.month}>
-                <h1>{monthNames[this.props.dataController.getState().date.getMonth()]}</h1>
+                <h1 className={s.monthName}>{monthNames[this.props.dataController.getState().date.getMonth()]}</h1>
 
-                <h1>{this.props.dataController.getState().date.getFullYear()}</h1>
+                <h1 className={s.year}>{this.props.dataController.getState().date.getFullYear()}</h1>
             </div>
         )
     }
