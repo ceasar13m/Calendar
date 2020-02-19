@@ -11,9 +11,7 @@ import DaysOfTheWeek from "./Table/daysOfTheWeek";
 class Calendar extends Component {
 
     createCalendar = (date) => {
-        debugger;
         let mon = date.getMonth();
-        debugger;
         const weeks = []; //Весь месяц
 
         //Первая строка таблицы календаря - названия дней недели
@@ -58,7 +56,6 @@ class Calendar extends Component {
 
     getDay = (date) => {
         let day = date.getDay();
-        debugger;
         if (day === 0)
             day = 7;
         return day - 1;

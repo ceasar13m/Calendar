@@ -1,16 +1,19 @@
 .calendar {
     display: grid;
-    grid-template-columns: 1fr 5fr 1fr;
+    grid-template-columns: 1fr 4fr 1fr;
     align-items: center;
 }
 
 
 .navigationButton {
-    margin: 0 auto;
+    margin: auto;
+
 }
 
 
 
 .calendarTable {
-    margin: 0 auto;
+    margin: auto;
 }
+
+

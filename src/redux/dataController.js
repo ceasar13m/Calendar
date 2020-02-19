@@ -1,31 +1,28 @@
 import React, {Component} from "react";
 
 
-class DataController extends Component{
+class DataController{
 
 
     constructor(App) {
-        super(App);
         this.App = App;
-        this.state = {
+        this.calendarState = {
             date: new Date()
         };
     }
 
 
     monthIncr() {
-        this.App.onDataChanged(this.state);
-        this.setState({date: new Date(this.state.date.getFullYear(), this.state.date.getMonth() + 1)});
+        this.App.onDataChanged(this.calendarState);
     }
 
     monthDecr() {
-        this.App.onDataChanged(this.state);
-        this.setState({date: new Date(this.state.date.getFullYear(), this.state.date.getMonth() - 1)});
+        this.App.onDataChanged(this.calendarState);
     }
 
 
     getState() {
-        return this.state;
+        return this.calendarState;
     }
 
 }

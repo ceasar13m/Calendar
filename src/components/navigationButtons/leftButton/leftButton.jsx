@@ -15,8 +15,8 @@ class LeftButton extends Component {
 
     render() {
         return (
-            <div className={s.leftButton}>
-                <input type="button" value="Назад" onClick={this.click}/>
+            <div className={s.leftButton} >
+                <input className={s.button} type="button" value="Назад" onClick={this.click} />
             </div>
         )
     };
