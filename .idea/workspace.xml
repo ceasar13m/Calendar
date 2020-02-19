@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ad33f94e-3a00-4f36-b598-208d472f6646" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/navigationButtons/leftButton/leftButton.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navigationButtons/leftButton/leftButton.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/navigationButtons/rightButton/rightButton.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navigationButtons/rightButton/rightButton.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/dataController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/dataController.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,8 +95,7 @@
       <workItem from="1581942803067" duration="55000" />
       <workItem from="1581942873024" duration="9535000" />
       <workItem from="1581973773049" duration="4962000" />
-      <workItem from="1582031194512" duration="7871000" />
-      <workItem from="1582109526183" duration="1562000" />
+      <workItem from="1582031194512" duration="6820000" />
     </task>
     <task id="LOCAL-00001" summary="0.1">
       <created>1581879752682</created>
@@ -150,14 +146,7 @@
       <option name="project" value="LOCAL" />
       <updated>1582053270833</updated>
     </task>
-    <task id="LOCAL-00008" summary="0.5&#10;&#10;Работает кнопка &quot;Вперед&quot;, но перескакивает на два месяца сразу">
-      <created>1582053521579</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1582053521579</updated>
-    </task>
-    <option name="localTasksCounter" value="9" />
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -181,10 +170,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="271" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581868670234" />
-    <state x="598" y="119" key="CommitChangelistDialog2" timestamp="1582053520938">
+    <state x="598" y="119" key="CommitChangelistDialog2" timestamp="1582053270097">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="598" y="119" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1582053520938" />
+    <state x="598" y="119" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1582053270097" />
     <state x="841" y="419" width="261" height="201" key="Github.ShareDialog" timestamp="1582053487778">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -193,10 +182,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="672" y="238" key="MultipleFileMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582053368423" />
-    <state x="552" y="257" key="Vcs.Push.Dialog.v2" timestamp="1582053568783">
+    <state x="552" y="257" key="Vcs.Push.Dialog.v2" timestamp="1582053289766">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="257" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1582053568783" />
+    <state x="552" y="257" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1582053289766" />
     <state x="771" y="440" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1581942990559">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
