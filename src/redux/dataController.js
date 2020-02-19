@@ -1,33 +1,31 @@
+import React, {Component} from "react";
 
 
-let state = {
-    date: new Date()
-};
+class DataController extends Component{
 
-
-class DataController {
 
     constructor(App) {
+        super(App);
         this.App = App;
+        this.state = {
+            date: new Date()
+        };
     }
 
 
     monthIncr() {
-        state.date = new Date(2020, state.date.getMonth() + 1);
-        this.App.onDataChanged(state);
+        this.App.onDataChanged(this.state);
+        this.setState({date: new Date(this.state.date.getFullYear(), this.state.date.getMonth() + 1)});
     }
 
     monthDecr() {
-        state.date = new Date(2020, state.date.getMonth() - 1);
-        this.App.onDataChanged(state);
+        this.App.onDataChanged(this.state);
+        this.setState({date: new Date(this.state.date.getFullYear(), this.state.date.getMonth() - 1)});
     }
 
-    stateUpdate() {
-        // this.getState().setState({date: state.date});
-    }
 
     getState() {
-        return state;
+        return this.state;
     }
 
 }

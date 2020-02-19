@@ -2,26 +2,24 @@ import React, {Component} from "react";
 import s from "./leftButton.module.css"
 
 
-class LeftButton extends Component{
+class LeftButton extends Component {
     constructor(props) {
         super(props);
         this.click = this.click.bind(this);
-    }
+    };
 
-    click() {
-
+    click = () => {
+        this.props.dataController.monthDecr();
     }
 
 
     render() {
         return (
             <div className={s.leftButton}>
-
                 <input type="button" value="Назад" onClick={this.click}/>
-
             </div>
         )
-    }
+    };
 }
 
 

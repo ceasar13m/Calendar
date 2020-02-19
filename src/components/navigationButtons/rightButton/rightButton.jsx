@@ -10,7 +10,6 @@ class RightButton extends Component {
 
     click = () => {
         this.props.dataController.monthIncr();
-        this.props.dataController.stateUpdate();
     };
 
 
