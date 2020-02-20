@@ -1,7 +1,34 @@
+p {
+    margin: 0;
+    font-size: 15rem;
+    font-family: 'Myriad Pro';
+    font-stretch: ultra-condensed;
+
+    -webkit-transform: scale(.50, 1.0);
+    -moz-transform: scale(.50, 1.0);
+    -ms-transform: scale(.50, 1.0);
+    -o-transform: scale(.50, 1.0);
+    transform: scale(.50,1.0);
+}
+
+
 .rightButton {
+    width: 15vw;
+    height: 80vh;
+    transition: background-color, opacity 0.3s linear;
+    line-height: 80vh;
+    font-size: 30px;
+    text-align: center;
+    opacity: 0.3;
 
 }
 
-.button {
-
+.rightButton:hover {
+    width: 15vw;
+    height: 80vh;
+    background-color: #999999;
+    opacity: 1;
+    cursor: pointer;
 }
+
+

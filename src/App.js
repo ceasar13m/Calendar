@@ -1,7 +1,7 @@
 import React from 'react';
 import s from './App.module.css';
 import Calendar from "./components/calendar";
-import MonthName from "./components/selectDate/MonthName";
+import DateSelect from "./components/selectDate/DateSelect";
 import DataController from "./redux/dataController";
 import LeftButton from "./components/navigationButtons/leftButton/leftButton";
 import RightButton from "./components/navigationButtons/rightButton/rightButton";
@@ -23,20 +23,23 @@ class App extends React.Component {
     render() {
         return (
             <div>
-                <div className={s.monthName}>
-                    <MonthName dataController={this.dataController}/>
-                </div>
+
+                <DateSelect dataController={this.dataController}/>
+
                 <div className={s.calendar}>
-                    <div className={s.navigationButton} >
-                        <LeftButton dataController={this.dataController}/>
-                    </div>
+
+
+                    <LeftButton dataController={this.dataController}/>
+
                     <div className={s.calendarTable}>
                         <Calendar date={this.state.date}/>
                     </div>
-                    <div className={s.navigationButton}>
-                        <RightButton dataController={this.dataController}/>
-                    </div>
+
+                    <RightButton dataController={this.dataController}/>
+
+
                 </div>
+
             </div>
         );
     }

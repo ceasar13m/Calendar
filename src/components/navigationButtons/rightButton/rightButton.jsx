@@ -6,7 +6,7 @@ class RightButton extends Component {
     constructor(props) {
         super(props);
         this.click = this.click.bind(this);
-    }; 
+    };
 
     click = () => {
         this.props.dataController.monthIncr();
@@ -14,8 +14,11 @@ class RightButton extends Component {
 
     render() {
         return (
-            <div className={s.rightButton} >
-                <input type="button" value="Вперед" onClick={this.click}/>
+            <div className={s.rightButton} onClick={this.click} >
+                <p>
+                     >
+                </p>
+
             </div>
         )
     };

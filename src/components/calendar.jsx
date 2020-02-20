@@ -17,7 +17,7 @@ class Calendar extends Component {
 
         //Первая строка таблицы календаря - названия дней недели
         weeks.push(
-            <DaysOfTheWeek />
+            <DaysOfTheWeek/>
         );
 
         let week = []; //Одна неделя
@@ -25,13 +25,24 @@ class Calendar extends Component {
 
         //Заполняем таблицу до начала месяца
         for (let i = 0; i < this.getDay(date); i++) {
-            week.push(<Square value=" "/>);
+            week.push(<Square isToday={false} value=" "/>);
         }
 
 
         //Создает недели и добавляем в массив месяца
         while (date.getMonth() === mon) {
-            week.push(<Square value={date.getDate()}/>);
+            let today = new Date();
+            if (date.getDate() === today.getDate() &&
+                date.getMonth() === today.getMonth() &&
+                date.getFullYear() === today.getFullYear()) {
+                week.push(<Square isToday={true} value={date.getDate()}/>);
+            }
+            else if(date.getDay() === 6 || date.getDay() === 7) {
+                week.push(<Square isWeekend = {true} value={date.getDate()}/>);
+            } else {
+                week.push(<Square value={date.getDate()}/>);
+            }
+
             if (this.getDay(date) % 7 === 6) {
                 weeks.push(<div className="board-row">{week}</div>);
                 week = [];
@@ -40,8 +51,6 @@ class Calendar extends Component {
             date.setDate(date.getDate() + 1);
         }
 
-        //Без этой строчки не всегда отрисовывает последнюю неделю
-        //Нжно разобраться
         weeks.push(<div className="board-row">{week}</div>);
 
         //Заполняет  таблицу до конца строки пустыми ячейками
@@ -54,6 +63,7 @@ class Calendar extends Component {
         return weeks;
 
     }
+
 
     getDay = (date) => {
         let day = date.getDay();

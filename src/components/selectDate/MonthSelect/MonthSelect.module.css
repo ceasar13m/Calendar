@@ -1,0 +1,63 @@
+h1 {
+    margin: 0 auto;
+    padding: 0;
+}
+/*Месяц*/
+
+.month {
+    display: flex;
+    justify-content: center;
+    height: 20vh;
+    margin: 0;
+
+    font-size: 20px;
+}
+
+.monthNameTitle {
+    padding-right: 10px;
+}
+
+
+.monthName {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/*Year*/
+
+.year {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/*Кнопки*/
+
+.up {
+    width: 10vw;
+    height: 5vh;
+    text-align: center;
+    transition: background-color 0.3s linear;
+}
+
+.up:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    opacity: 1;
+    cursor: pointer;
+}
+
+.down {
+    width: 10vw;
+    height: 5vh;
+    text-align: center;
+    transition: background-color 0.3s linear;
+}
+
+.down:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    opacity: 1;
+    cursor: pointer;
+}
