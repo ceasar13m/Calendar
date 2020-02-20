@@ -31,7 +31,7 @@ class App extends React.Component {
                         <LeftButton dataController={this.dataController}/>
                     </div>
                     <div className={s.calendarTable}>
-                        <Calendar date={this.dataController.getState().date}/>
+                        <Calendar date={this.state.date}/>
                     </div>
                     <div className={s.navigationButton}>
                         <RightButton dataController={this.dataController}/>

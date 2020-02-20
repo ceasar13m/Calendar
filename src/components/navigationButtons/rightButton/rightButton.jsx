@@ -6,12 +6,11 @@ class RightButton extends Component {
     constructor(props) {
         super(props);
         this.click = this.click.bind(this);
-    };
+    }; 
 
     click = () => {
         this.props.dataController.monthIncr();
     };
-
 
     render() {
         return (
