@@ -20,12 +20,38 @@ class MonthName extends Component{
             "Декабрь"
         ];
 
+         let clickUp = () => {
+            this.props.dataController.monthDecr();
+        };
+
+        let clickDown = () => {
+            this.props.dataController.monthIncr();
+        };
 
         return (
             <div className={s.month}>
-                <h1 className={s.monthName}>{monthNames[this.props.dataController.getState().date.getMonth()]}</h1>
+                <div className={s.monhtName}>
+                    <div className={s.up} onClick={clickUp}>
 
-                <h1 className={s.year}>{this.props.dataController.getState().date.getFullYear()}</h1>
+                    </div>
+                    <div>
+                        <h1 className={s.monthNameTitle}>{monthNames[this.props.dataController.getState().date.getMonth()]}</h1>
+                    </div>
+                    <div className={s.down} onClick={clickDown}>
+
+                    </div>
+                </div>
+                <div className={s.year}>
+                    <div className={s.up}>
+                       Оскэ
+                    </div>
+                    <div>
+                        <h1 className={s.yearTitle}>{this.props.dataController.getState().date.getFullYear()}</h1>
+                    </div>
+                    <div className={s.down}>
+                        Аска
+                    </div>
+                </div>
             </div>
         )
     }
