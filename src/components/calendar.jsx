@@ -10,7 +10,8 @@ import DaysOfTheWeek from "./Table/daysOfTheWeek";
 
 class Calendar extends Component {
 
-    createCalendar = (date) => {
+    createCalendar = (d) => {
+        let date = new Date(d.getFullYear(), d.getMonth());
         let mon = date.getMonth();
         const weeks = []; //Весь месяц
 

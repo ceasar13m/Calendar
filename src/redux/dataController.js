@@ -13,10 +13,12 @@ class DataController{
 
 
     monthIncr() {
+        this.calendarState.date = new Date(this.calendarState.date.getFullYear(), this.calendarState.date.getMonth() + 1);
         this.App.onDataChanged(this.calendarState);
     }
 
     monthDecr() {
+        this.calendarState.date = new Date(this.calendarState.date.getFullYear(), this.calendarState.date.getMonth() - 1);
         this.App.onDataChanged(this.calendarState);
     }
 
