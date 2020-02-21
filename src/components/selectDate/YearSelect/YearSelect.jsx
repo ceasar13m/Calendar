@@ -16,13 +16,17 @@ class YearSelect extends Component {
 
         return (
             <div className={s.year}>
-                <div className={s.up} onClick={yearClickUp}/>
+                <div className={s.up} onClick={yearClickUp}>
+                    next
+                </div>
 
                 <div>
                     <h1 className={s.yearTitle}>{this.props.dataController.getState().date.getFullYear()}</h1>
                 </div>
 
-                <div className={s.down} onClick={yearClickDown}/>
+                <div className={s.down} onClick={yearClickDown}>
+                    previous
+                </div>
 
             </div>
         )

@@ -5,6 +5,7 @@ import DateSelect from "./components/selectDate/DateSelect";
 import DataController from "./redux/dataController";
 import LeftButton from "./components/navigationButtons/leftButton/leftButton";
 import RightButton from "./components/navigationButtons/rightButton/rightButton";
+import Form from "./components/form/form";
 
 
 class App extends React.Component {
@@ -23,6 +24,8 @@ class App extends React.Component {
     render() {
         return (
             <div>
+
+                <Form />
 
                 <DateSelect dataController={this.dataController}/>
 

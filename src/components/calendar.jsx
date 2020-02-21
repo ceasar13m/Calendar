@@ -37,13 +37,16 @@ class Calendar extends Component {
                 date.getFullYear() === today.getFullYear()) {
                 week.push(<Square isToday={true} value={date.getDate()}/>);
             }
-            else if(date.getDay() === 6 || date.getDay() === 7) {
+            else if(date.getDay() === 6 || date.getDay() === 0) {
+                debugger;
                 week.push(<Square isWeekend = {true} value={date.getDate()}/>);
             } else {
+                debugger;
                 week.push(<Square value={date.getDate()}/>);
             }
 
             if (this.getDay(date) % 7 === 6) {
+                debugger;
                 weeks.push(<div className="board-row">{week}</div>);
                 week = [];
             }

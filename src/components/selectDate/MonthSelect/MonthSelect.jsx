@@ -32,7 +32,9 @@ class MonthSelect extends Component {
         return (
             <div className={s.monthName}>
 
-                <div className={s.up} onClick={monthClickUp}/>
+                <div className={s.up} onClick={monthClickUp}>
+                    next
+                </div>
 
 
                 <div>
@@ -40,7 +42,9 @@ class MonthSelect extends Component {
                 </div>
 
 
-                <div className={s.down} onClick={monthClickDown}/>
+                <div className={s.down} onClick={monthClickDown}>
+                    previous
+                </div>
 
             </div>
 
