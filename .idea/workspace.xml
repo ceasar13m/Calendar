@@ -3,6 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="ad33f94e-3a00-4f36-b598-208d472f6646" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Square/square.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Square/square.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Square/square.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Square/square.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Table/daysOfTheWeek.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Table/daysOfTheWeek.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Table/daysOfWeek.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Table/daysOfWeek.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/selectDate/MonthName.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/selectDate/MonthName.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/selectDate/MonthName.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/selectDate/MonthName.module.css" afterDir="false" />
     </list>
@@ -38,6 +44,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -105,7 +112,8 @@
       <workItem from="1582136054029" duration="7176000" />
       <workItem from="1582152014010" duration="1089000" />
       <workItem from="1582188361063" duration="79000" />
-      <workItem from="1582214534624" duration="1667000" />
+      <workItem from="1582214534624" duration="4209000" />
+      <workItem from="1582320865496" duration="4814000" />
     </task>
     <task id="LOCAL-00001" summary="0.1">
       <created>1581879752682</created>
@@ -170,7 +178,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582215078249</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="0.8">
+      <created>1582218876616</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1582218876616</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -197,7 +212,8 @@
     <MESSAGE value="0.4&#10;&#10;В стейт хранится целая дата. Ниечго не работает" />
     <MESSAGE value="0.5&#10;&#10;Работает кнопка &quot;Вперед&quot;, но перескакивает на два месяца сразу" />
     <MESSAGE value="0.6&#10;&#10;Работает кнопка &quot;Вперед&quot;&#10;Кнопка &quot;Назад&quot; работает как кнопка &quot;Вперед&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="0.6&#10;&#10;Работает кнопка &quot;Вперед&quot;&#10;Кнопка &quot;Назад&quot; работает как кнопка &quot;Вперед&quot;" />
+    <MESSAGE value="0.8" />
+    <option name="LAST_COMMIT_MESSAGE" value="0.8" />
   </component>
   <component name="WindowStateProjectService">
     <state x="714" y="331" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1581976816787">
@@ -208,39 +224,39 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="271" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581868670234" />
-    <state x="399" y="92" key="CommitChangelistDialog2" timestamp="1582215078068">
+    <state x="399" y="92" key="CommitChangelistDialog2" timestamp="1582218876495">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="399" y="92" key="CommitChangelistDialog2/0.0.1280.800@0.0.1280.800" timestamp="1582215078068" />
+    <state x="399" y="92" key="CommitChangelistDialog2/0.0.1280.800@0.0.1280.800" timestamp="1582218876495" />
     <state x="598" y="119" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1582116896285" />
     <state x="841" y="419" width="261" height="201" key="Github.ShareDialog" timestamp="1582053487778">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="841" y="419" width="261" height="201" key="Github.ShareDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582053487778" />
-    <state width="1259" height="212" key="GridCell.Tab.0.bottom" timestamp="1582217347054">
+    <state width="1259" height="212" key="GridCell.Tab.0.bottom" timestamp="1582320909098">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1259" height="212" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1582217347054" />
-    <state width="1259" height="212" key="GridCell.Tab.0.center" timestamp="1582217347053">
+    <state width="1259" height="212" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1582320909098" />
+    <state width="1259" height="212" key="GridCell.Tab.0.center" timestamp="1582320909096">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1259" height="212" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1582217347053" />
-    <state width="1259" height="212" key="GridCell.Tab.0.left" timestamp="1582217347052">
+    <state width="1259" height="212" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1582320909096" />
+    <state width="1259" height="212" key="GridCell.Tab.0.left" timestamp="1582320909095">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1259" height="212" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1582217347052" />
-    <state width="1259" height="212" key="GridCell.Tab.0.right" timestamp="1582217347054">
+    <state width="1259" height="212" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1582320909095" />
+    <state width="1259" height="212" key="GridCell.Tab.0.right" timestamp="1582320909097">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1259" height="212" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1582217347054" />
+    <state width="1259" height="212" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1582320909097" />
     <state x="672" y="238" key="MultipleFileMergeDialog" timestamp="1582053368423">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="672" y="238" key="MultipleFileMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582053368423" />
-    <state x="368" y="198" key="Vcs.Push.Dialog.v2" timestamp="1582215080765">
+    <state x="368" y="198" key="Vcs.Push.Dialog.v2" timestamp="1582218878847">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="368" y="198" key="Vcs.Push.Dialog.v2/0.0.1280.800@0.0.1280.800" timestamp="1582215080765" />
+    <state x="368" y="198" key="Vcs.Push.Dialog.v2/0.0.1280.800@0.0.1280.800" timestamp="1582218878847" />
     <state x="552" y="257" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1582111556335" />
     <state x="514" y="338" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1582188376856">
       <screen x="0" y="0" width="1280" height="800" />

@@ -1,4 +1,4 @@
-.square {
+.square button {
     background: #fff;
     border: 1px solid #999;
     float: left;
@@ -11,4 +11,17 @@
     padding: 0;
     text-align: center;
     width: 10vw;
+}
+
+.square {
+    float: left;
+}
+
+Modal {
+    top: 50%;
+    left: 50%;
+    right: auto;
+    bottom: auto;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
 }

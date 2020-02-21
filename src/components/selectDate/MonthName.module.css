@@ -1,6 +1,16 @@
-h1 {
+h1, h3 {
     margin: 0 auto;
     padding: 0;
+}
+
+p {
+    font-size: 15px;
+    opacity: 0.5;
+    transition: opacity 0.5s linear;
+}
+p:hover {
+    font-size: 15px;
+    opacity: 1;
 }
 /*Месяц*/
 
@@ -10,7 +20,7 @@ h1 {
     height: 20vh;
     margin: 0;
 
-    font-size: 10px;
+    font-size: 20px;
 }
 
 .monthNameTitle {
@@ -39,6 +49,7 @@ h1 {
     height: 5vh;
     text-align: center;
     transition: background-color 0.3s linear;
+    line-height: 5vh;
 }
 
 .up:hover {
@@ -52,6 +63,7 @@ h1 {
     height: 5vh;
     text-align: center;
     transition: background-color 0.3s linear;
+    line-height: 5vh;
 }
 
 .down:hover {

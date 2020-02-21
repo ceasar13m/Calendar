@@ -15,8 +15,8 @@ class DaysOfTheWeek extends React.Component {
                 <Square value="Ср"/>
                 <Square value="Чт"/>
                 <Square value="Пт"/>
-                <Square value="Сб"/>
-                <Square value="Вс"/>
+                <Square clasName={s.sat} value="Сб"/>
+                <Square clasName={s.son} value="Вс"/>
             </div>
         );
     }

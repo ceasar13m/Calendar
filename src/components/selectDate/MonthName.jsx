@@ -32,12 +32,14 @@ class MonthName extends Component{
             <div className={s.month}>
                 <div className={s.monhtName}>
                     <div className={s.up} onClick={clickUp}>
-
+                        <p className={s.monthNameTitle}>{monthNames[this.props.dataController.getState().date.getMonth()-1]}</p>
                     </div>
                     <div>
                         <h1 className={s.monthNameTitle}>{monthNames[this.props.dataController.getState().date.getMonth()]}</h1>
                     </div>
                     <div className={s.down} onClick={clickDown}>
+                        <p className={s.monthNameTitle}>{monthNames[this.props.dataController.getState().date.getMonth()+1]}</p>
+
 
                     </div>
                 </div>
