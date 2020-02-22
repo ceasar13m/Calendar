@@ -2,13 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ad33f94e-3a00-4f36-b598-208d472f6646" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/form/form.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/form/form.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/form/ListForm.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/calendar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/calendar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/selectDate/MonthSelect/MonthSelect.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/selectDate/MonthSelect/MonthSelect.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/selectDate/YearSelect/YearSelect.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/selectDate/YearSelect/YearSelect.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/form/form.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/form/form.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/form/form.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/form/form.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/navigationButtons/leftButton/leftButton.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navigationButtons/leftButton/leftButton.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/navigationButtons/rightButton/rightButton.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navigationButtons/rightButton/rightButton.module.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +106,8 @@
       <workItem from="1582116881026" duration="1949000" />
       <workItem from="1582136054029" duration="7176000" />
       <workItem from="1582183805646" duration="2815000" />
-      <workItem from="1582259805360" duration="6025000" />
+      <workItem from="1582259805360" duration="7017000" />
+      <workItem from="1582357561302" duration="4739000" />
     </task>
     <task id="LOCAL-00001" summary="0.1">
       <created>1581879752682</created>
@@ -163,7 +165,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582186948560</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="0.7&#10;&#10;Есть окно, просто окно">
+      <created>1582281993903</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1582281993903</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -178,7 +187,8 @@
     <MESSAGE value="0.5&#10;&#10;Работает кнопка &quot;Вперед&quot;, но перескакивает на два месяца сразу" />
     <MESSAGE value="0.6&#10;&#10;Работает кнопка &quot;Вперед&quot;&#10;Кнопка &quot;Назад&quot; работает как кнопка &quot;Вперед&quot;" />
     <MESSAGE value="0.7&#10;&#10;Работает кнопка &quot;Вперед&quot;&#10;работает кнопка &quot;Назад&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="0.7&#10;&#10;Работает кнопка &quot;Вперед&quot;&#10;работает кнопка &quot;Назад&quot;" />
+    <MESSAGE value="0.7&#10;&#10;Есть окно, просто окно" />
+    <option name="LAST_COMMIT_MESSAGE" value="0.7&#10;&#10;Есть окно, просто окно" />
   </component>
   <component name="WindowStateProjectService">
     <state x="714" y="331" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1581976816787">
@@ -189,10 +199,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="271" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581868670234" />
-    <state x="399" y="0" key="CommitChangelistDialog2" timestamp="1582186946980">
+    <state x="399" y="0" key="CommitChangelistDialog2" timestamp="1582281992492">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="399" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1582186946980" />
+    <state x="399" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1582281992492" />
     <state x="598" y="119" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1582116896285" />
     <state x="841" y="419" width="261" height="201" key="Github.ShareDialog" timestamp="1582053487778">
       <screen x="0" y="0" width="1920" height="1040" />

@@ -26,7 +26,6 @@ p {
 .rightButton:hover {
     width: 15vw;
     height: 80vh;
-    background-color: #999999;
     opacity: 1;
     cursor: pointer;
 }

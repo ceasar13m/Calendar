@@ -6,6 +6,7 @@ import DataController from "./redux/dataController";
 import LeftButton from "./components/navigationButtons/leftButton/leftButton";
 import RightButton from "./components/navigationButtons/rightButton/rightButton";
 import Form from "./components/form/form";
+import TodoApp from "./components/form/ListForm";
 
 
 class App extends React.Component {
@@ -24,6 +25,7 @@ class App extends React.Component {
     render() {
         return (
             <div>
+
 
                 <Form />
 
