@@ -4,45 +4,57 @@ class DataController {
     constructor(App) {
         this.App = App;
         this.calendarState = {
-            date: new Date()
-        };
+            calendar: {
+                date: new Date()
+            },
+            events: [],
+            loadings: false
+        }
     }
 
 
     monthIncr() {
-        this.calendarState.date = new Date(
-            this.calendarState.date.getFullYear(),
-            this.calendarState.date.getMonth() + 1
+        this.calendarState.calendar.date = new Date(
+            this.calendarState.calendar.date.getFullYear(),
+            this.calendarState.calendar.date.getMonth() + 1
         );
 
-        this.App.onDataChanged(this.calendarState);
+        this.App.onCalendarChanged({
+            date: this.calendarState.calendar.date
+        });
     }
 
     monthDecr() {
-        this.calendarState.date = new Date(
-            this.calendarState.date.getFullYear(),
-            this.calendarState.date.getMonth() - 1
+        this.calendarState.calendar.date = new Date(
+            this.calendarState.calendar.date.getFullYear(),
+            this.calendarState.calendar.date.getMonth() - 1
         );
 
-        this.App.onDataChanged(this.calendarState);
+        this.App.onCalendarChanged({
+            date: this.calendarState.calendar.date
+        });
     }
 
     yearIncr() {
-        this.calendarState.date = new Date(
-            this.calendarState.date.getFullYear() + 1,
-            this.calendarState.date.getMonth()
+        this.calendarState.calendar.date = new Date(
+            this.calendarState.calendar.date.getFullYear() + 1,
+            this.calendarState.calendar.date.getMonth()
         );
 
-        this.App.onDataChanged(this.calendarState);
+        this.App.onCalendarChanged({
+            date: this.calendarState.calendar.date
+        });
     }
 
     yearDecr() {
-        this.calendarState.date = new Date(
-            this.calendarState.date.getFullYear() - 1,
-            this.calendarState.date.getMonth()
+        this.calendarState.calendar.date = new Date(
+            this.calendarState.calendar.date.getFullYear() - 1,
+            this.calendarState.calendar.date.getMonth()
         );
 
-        this.App.onDataChanged(this.calendarState);
+        this.App.onCalendarChanged({
+            date: this.calendarState.calendar.date
+        });
     }
 
 

@@ -1,0 +1,29 @@
+[
+  {
+    "date": "",
+    "events": [
+      {
+        "eventId": 1212,
+        "description": "Текст события.."
+      }
+    ]
+  },
+  {
+    "date": "Дата",
+    "events": [
+      {
+        "eventId": 1212,
+        "description": "Текст события.."
+      }
+    ]
+  },
+  {
+    "date": "",
+    "events": [
+      {
+        "eventId": 1212,
+        "description": "Текст события.."
+      }
+    ]
+  }
+]

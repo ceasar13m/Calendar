@@ -5,12 +5,17 @@ import YearSelect from "./YearSelect/YearSelect";
 
 
 class DateSelect extends Component{
+
+    constructor(props) {
+        super(props);
+    }
+
     render() {
         return (
             <div className={s.month}>
-                <MonthSelect dataController={this.props.dataController}/>
+                <MonthSelect dataController={this.props.dataController} date={this.props.date}/>
 
-                <YearSelect dataController={this.props.dataController}/>
+                <YearSelect dataController={this.props.dataController} date={this.props.date}/>
             </div>
         )
     }

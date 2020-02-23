@@ -5,31 +5,58 @@ import DateSelect from "./components/selectDate/DateSelect";
 import DataController from "./redux/dataController";
 import LeftButton from "./components/navigationButtons/leftButton/leftButton";
 import RightButton from "./components/navigationButtons/rightButton/rightButton";
-import Form from "./components/form/form";
-import TodoApp from "./components/form/ListForm";
+import EventsWindow from "./components/form/events-window";
+import LoadingContainer from "./components/loading-container";
 
-
+/**
+ * this.state = {
+            calendar: {
+                date: new Date()
+            },
+            events: [],
+            loadings: true/false
+        }
+ */
 class App extends React.Component {
     constructor(props) {
         super(props);
         this.dataController = new DataController(this);
         this.state = this.dataController.getState();
-        this.onDataChanged = this.onDataChanged.bind(this);
+        this.onCalendarChanged = this.onCalendarChanged.bind(this);
     }
 
 
-    onDataChanged(newData) {
-        this.setState(newData);
+    onCalendarChanged(calendarNewState) {
+        this.setState({
+            ...this.state,
+            calendar: calendarNewState
+        });
+    }
+
+    onEventsWindowChanged(eventsNewState) {
+        this.setState({
+            ...this.state,
+            events: eventsNewState
+        });
+    }
+
+
+    onEventsLoaderChanged(loadingNewState) {
+        this.setState({
+            ...this.state,
+            loading: loadingNewState
+        });
     }
 
     render() {
         return (
             <div>
 
+                <LoadingContainer visible={this.state.loading}/>
 
-                <Form />
+                <EventsWindow  events={this.state.events}/>
 
-                <DateSelect dataController={this.dataController}/>
+                <DateSelect dataController={this.dataController} date={this.state.calendar.date}/>
 
                 <div className={s.calendar}>
 
@@ -37,7 +64,7 @@ class App extends React.Component {
                     <LeftButton dataController={this.dataController}/>
 
                     <div className={s.calendarTable}>
-                        <Calendar date={this.state.date}/>
+                        <Calendar date={this.state.calendar.date}/>
                     </div>
 
                     <RightButton dataController={this.dataController}/>

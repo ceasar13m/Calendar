@@ -3,6 +3,11 @@ import s from "./YearSelect.module.css"
 
 
 class YearSelect extends Component {
+
+    constructor(props) {
+        super(props);
+    }
+
     render() {
 
         let yearClickDown = () => {
@@ -21,7 +26,7 @@ class YearSelect extends Component {
                 </div>
 
                 <div>
-                    <h1 className={s.yearTitle}>{this.props.dataController.getState().date.getFullYear()}</h1>
+                    <h1 className={s.yearTitle}>{this.props.date.getFullYear()}</h1>
                 </div>
 
                 <div className={s.down} onClick={yearClickDown}>

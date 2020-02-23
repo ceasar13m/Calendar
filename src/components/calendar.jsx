@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import Square from "./Square/square";
+import Cell from "./Square/cell";
 import DaysOfTheWeek from "./Table/daysOfTheWeek";
 
 
@@ -23,9 +23,14 @@ class Calendar extends Component {
         let week = []; //Одна неделя
 
 
+
+        let previousMonthDate = new Date(date.getFullYear(), date.getMonth(), 0);
+        let a = previousMonthDate.getDate();
+        let b = this.getDay(previousMonthDate);
         //Заполняем таблицу до начала месяца
-        for (let i = 0; i < this.getDay(date); i++) {
-            week.push(<Square isToday={false} value=" "/>);
+        for (let i = previousMonthDate.getDate() - this.getDay(previousMonthDate); i <= previousMonthDate.getDate(); i++) {
+            debugger;
+            week.push(<Cell notButtonSquare={true} value={i}/>);
         }
 
 
@@ -35,18 +40,15 @@ class Calendar extends Component {
             if (date.getDate() === today.getDate() &&
                 date.getMonth() === today.getMonth() &&
                 date.getFullYear() === today.getFullYear()) {
-                week.push(<Square isToday={true} value={date.getDate()}/>);
+                week.push(<Cell isToday={true} value={date.getDate()}/>);
             }
             else if(date.getDay() === 6 || date.getDay() === 0) {
-                debugger;
-                week.push(<Square isWeekend = {true} value={date.getDate()}/>);
+                week.push(<Cell isWeekend = {true} value={date.getDate()}/>);
             } else {
-                debugger;
-                week.push(<Square value={date.getDate()}/>);
+                week.push(<Cell value={date.getDate()}/>);
             }
 
             if (this.getDay(date) % 7 === 6) {
-                debugger;
                 weeks.push(<div className="board-row">{week}</div>);
                 week = [];
             }
@@ -54,14 +56,18 @@ class Calendar extends Component {
             date.setDate(date.getDate() + 1);
         }
 
-        weeks.push(<div className="board-row">{week}</div>);
 
+
+        let nextMonthDate = new Date(date.getFullYear(), date.getMonth());
         //Заполняет  таблицу до конца строки пустыми ячейками
         if (this.getDay(date) !== 0) {
-            for (let i = this.getDay(date); i < 7; i++) {
-                week.push(<Square value=" "/>);
+            for (let i = this.getDay(nextMonthDate); i < 7; i++) {
+                week.push(<Cell value={nextMonthDate.getDate()}/>);
+                nextMonthDate.setDate(nextMonthDate.getDate() + 1);
             }
         }
+
+        weeks.push(<div className="board-row">{week}</div>);
 
         return weeks;
 

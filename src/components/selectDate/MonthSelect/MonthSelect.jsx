@@ -3,6 +3,11 @@ import s from "./MonthSelect.module.css"
 
 
 class MonthSelect extends Component {
+
+    constructor(props) {
+        super(props);
+    }
+
     render() {
 
         const monthNames = [
@@ -33,17 +38,17 @@ class MonthSelect extends Component {
             <div className={s.monthName}>
 
                 <div className={s.up} onClick={monthClickUp}>
-                    next
+                    <div className={s.upButtonText}>next</div>
                 </div>
 
 
                 <div>
-                    <h1 className={s.monthNameTitle}>{monthNames[this.props.dataController.getState().date.getMonth()]}</h1>
+                    <h1 className={s.monthNameTitle}>{monthNames[this.props.date.getMonth()]}</h1>
                 </div>
 
 
                 <div className={s.down} onClick={monthClickDown}>
-                    previous
+                    <div className={s.downButtonText}>previous</div>
                 </div>
 
             </div>

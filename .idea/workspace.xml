@@ -2,14 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ad33f94e-3a00-4f36-b598-208d472f6646" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/form/ListForm.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Square/cell.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Square/dayButtonOnClick.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/loading-container.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/abc.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/network-service.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/form/form.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/form/form.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/form/form.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/form/form.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/navigationButtons/leftButton/leftButton.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navigationButtons/leftButton/leftButton.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/navigationButtons/rightButton/rightButton.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navigationButtons/rightButton/rightButton.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Square/square.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Square/square.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Square/cell.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Table/daysOfTheWeek.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Table/daysOfTheWeek.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/calendar.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/calendar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/calendar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/calendar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/form/ListForm.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/form/form.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/form/events-window.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/form/form.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/form/events-winow.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/selectDate/DateSelect.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/selectDate/DateSelect.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/selectDate/MonthSelect/MonthSelect.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/selectDate/MonthSelect/MonthSelect.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/selectDate/MonthSelect/MonthSelect.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/selectDate/MonthSelect/MonthSelect.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/selectDate/YearSelect/YearSelect.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/selectDate/YearSelect/YearSelect.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/dataController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/dataController.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +36,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -43,16 +57,25 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/selectDate/YearSelect" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2019.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\muhar\WebstormProjects\claendar\src\components\selectDate\YearSelect" />
+      <recent name="C:\Users\muhar\WebstormProjects\claendar\src\components\selectDate\MonthSelect" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\muhar\WebstormProjects\claendar\src\components\navigationButtons\rightButton" />
       <recent name="C:\Users\muhar\WebstormProjects\claendar\src\components\navigationButtons\leftButton" />
@@ -104,10 +127,12 @@
       <workItem from="1581973773049" duration="4962000" />
       <workItem from="1582031194512" duration="6820000" />
       <workItem from="1582116881026" duration="1949000" />
-      <workItem from="1582136054029" duration="7176000" />
-      <workItem from="1582183805646" duration="2815000" />
-      <workItem from="1582259805360" duration="7017000" />
-      <workItem from="1582357561302" duration="4739000" />
+      <workItem from="1582136054029" duration="8723000" />
+      <workItem from="1582213749946" duration="12925000" />
+      <workItem from="1582303444339" duration="4138000" />
+      <workItem from="1582372712857" duration="1790000" />
+      <workItem from="1582429974880" duration="14832000" />
+      <workItem from="1582487803317" duration="2838000" />
     </task>
     <task id="LOCAL-00001" summary="0.1">
       <created>1581879752682</created>
@@ -158,19 +183,19 @@
       <option name="project" value="LOCAL" />
       <updated>1582053270833</updated>
     </task>
-    <task id="LOCAL-00008" summary="0.7&#10;&#10;Работает кнопка &quot;Вперед&quot;&#10;работает кнопка &quot;Назад&quot;">
-      <created>1582186948560</created>
+    <task id="LOCAL-00008" summary="0.6&#10;&#10;Работает кнопка &quot;Вперед&quot;&#10;Кнопка &quot;Назад&quot; работает как кнопка &quot;Вперед&quot;">
+      <created>1582144848372</created>
       <option name="number" value="00008" />
       <option name="presentableId" value="LOCAL-00008" />
       <option name="project" value="LOCAL" />
-      <updated>1582186948560</updated>
+      <updated>1582144848372</updated>
     </task>
-    <task id="LOCAL-00009" summary="0.7&#10;&#10;Есть окно, просто окно">
-      <created>1582281993903</created>
+    <task id="LOCAL-00009" summary="0.1&#10;&#10;css">
+      <created>1582232125655</created>
       <option name="number" value="00009" />
       <option name="presentableId" value="LOCAL-00009" />
       <option name="project" value="LOCAL" />
-      <updated>1582281993903</updated>
+      <updated>1582232125655</updated>
     </task>
     <option name="localTasksCounter" value="10" />
     <servers />
@@ -186,62 +211,57 @@
     <MESSAGE value="0.4&#10;&#10;В стейт хранится целая дата. Ниечго не работает" />
     <MESSAGE value="0.5&#10;&#10;Работает кнопка &quot;Вперед&quot;, но перескакивает на два месяца сразу" />
     <MESSAGE value="0.6&#10;&#10;Работает кнопка &quot;Вперед&quot;&#10;Кнопка &quot;Назад&quot; работает как кнопка &quot;Вперед&quot;" />
-    <MESSAGE value="0.7&#10;&#10;Работает кнопка &quot;Вперед&quot;&#10;работает кнопка &quot;Назад&quot;" />
-    <MESSAGE value="0.7&#10;&#10;Есть окно, просто окно" />
-    <option name="LAST_COMMIT_MESSAGE" value="0.7&#10;&#10;Есть окно, просто окно" />
+    <MESSAGE value="0.1&#10;&#10;css" />
+    <option name="LAST_COMMIT_MESSAGE" value="0.1&#10;&#10;css" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="552" y="182" key="#ESLint" timestamp="1582463569022">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="182" key="#ESLint/0.0.1920.1040@0.0.1920.1040" timestamp="1582463569022" />
     <state x="714" y="331" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1581976816787">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="714" y="331" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1581976816787" />
-    <state x="690" y="271" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1581868670234">
+    <state x="690" y="271" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1582475110398">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="690" y="271" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581868670234" />
-    <state x="399" y="0" key="CommitChangelistDialog2" timestamp="1582281992492">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state x="690" y="271" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582475110398" />
+    <state x="598" y="119" key="CommitChangelistDialog2" timestamp="1582232124728">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="399" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1582281992492" />
-    <state x="598" y="119" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1582116896285" />
+    <state x="598" y="119" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1582232124728" />
     <state x="841" y="419" width="261" height="201" key="Github.ShareDialog" timestamp="1582053487778">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="841" y="419" width="261" height="201" key="Github.ShareDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582053487778" />
-    <state width="1259" height="163" key="GridCell.Tab.0.bottom" timestamp="1582195291766">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state x="184" y="92" key="MergeDialog" timestamp="1582213771969">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1259" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1582195291766" />
-    <state width="1259" height="163" key="GridCell.Tab.0.center" timestamp="1582195291766">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state x="184" y="92" key="MergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582213771969" />
+    <state x="931" y="167" key="MultipleFileMergeDialog" timestamp="1582430580062">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1259" height="163" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1582195291766" />
-    <state width="1259" height="163" key="GridCell.Tab.0.left" timestamp="1582195291766">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state x="931" y="167" key="MultipleFileMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582430580062" />
+    <state x="552" y="257" key="Vcs.Push.Dialog.v2" timestamp="1582232134818">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1259" height="163" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1582195291766" />
-    <state width="1259" height="163" key="GridCell.Tab.0.right" timestamp="1582195291766">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state x="552" y="257" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1582232134818" />
+    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1582312577708">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1259" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1582195291766" />
-    <state x="448" y="118" key="MultipleFileMergeDialog" timestamp="1582259837020">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582312577708" />
+    <state x="771" y="440" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1582430556690">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="448" y="118" key="MultipleFileMergeDialog/0.0.1280.680@0.0.1280.680" timestamp="1582259837020" />
-    <state x="672" y="238" key="MultipleFileMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582053368423" />
-    <state x="368" y="155" key="Vcs.Push.Dialog.v2" timestamp="1582186984134">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="368" y="155" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1582186984134" />
-    <state x="552" y="257" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1582111556335" />
-    <state x="514" y="288" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1582259825110">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="514" y="288" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680@0.0.1280.680" timestamp="1582259825110" />
-    <state x="771" y="440" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1581942990559" />
+    <state x="771" y="440" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1582430556690" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1582138607442">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1582138607442" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1582488825877">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1582488825877" />
   </component>
 </project>
