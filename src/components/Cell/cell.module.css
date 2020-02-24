@@ -31,7 +31,8 @@
 }
 
 .weekend {
-    background: darksalmon;
+    background: white;
+    color: sienna;
     border: 1px solid #999;
     float: left;
     font-size: 30px;
@@ -58,4 +59,22 @@
     padding: 0;
     text-align: center;
     width: 10vw;
+    color: #999999;
+    outline: none;
+}
+
+.dateName {
+    background: #fff;
+    border: 1px solid #999;
+    float: left;
+    font-size: 50px;
+    font-weight: bold;
+    line-height: 34px;
+    height: 10vh;
+    margin-right: -1px;
+    margin-top: -1px;
+    padding: 0;
+    text-align: center;
+    width: 10vw;
+    outline: none;
 }

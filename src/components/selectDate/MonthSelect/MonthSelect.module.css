@@ -15,6 +15,7 @@ h1 {
 
 .monthNameTitle {
     padding-right: 10px;
+
 }
 
 
@@ -23,6 +24,7 @@ h1 {
     align-items: center;
     flex-direction: column;
     justify-content: center;
+    text-transform: uppercase;
 }
 
 
@@ -32,7 +34,11 @@ h1 {
     width: 10vw;
     height: 5vh;
     text-align: center;
+
     transition: background-color 0.3s linear;
+    border-radius: 5px;
+    line-height: 5vh;
+
 }
 
 .up:hover {
@@ -46,6 +52,9 @@ h1 {
     height: 5vh;
     text-align: center;
     transition: background-color 0.3s linear;
+    border-radius: 5px;
+    line-height: 5vh;
+
 }
 
 .down:hover {

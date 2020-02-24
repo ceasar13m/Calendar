@@ -23,10 +23,9 @@ class Calendar extends Component {
         let week = []; //Одна неделя
 
 
+
+
         let previousMonthDate = new Date(date.getFullYear(), date.getMonth(), 0);
-
-        //Заполняем таблицу до начала месяца
-
         for (let i = previousMonthDate.getDate() - this.getDay(previousMonthDate); i <= previousMonthDate.getDate(); i++) {
             if (previousMonthDate.getDay() == 0)
                 break;
@@ -39,20 +38,22 @@ class Calendar extends Component {
         }
 
 
-        //Создает недели и добавляет в массив месяца
+
+        //Создает недели и добавляем в массив месяца
         while (date.getMonth() === mon) {
             let today = new Date();
             if (date.getDate() === today.getDate() &&
                 date.getMonth() === today.getMonth() &&
                 date.getFullYear() === today.getFullYear()) {
                 week.push(<Cell isToday={true} value={date.getDate()}/>);
-            } else if (date.getDay() === 6 || date.getDay() === 0) {
-                week.push(<Cell isWeekend={true} value={date.getDate()}/>);
+            }
+            else if(date.getDay() === 6 || date.getDay() === 0) {
+                week.push(<Cell isWeekend = {true} value={date.getDate()}/>);
             } else {
                 week.push(<Cell value={date.getDate()}/>);
             }
 
-            if (this.getDay(date) % 7 === 6 || this.getDay(date) === 0) {
+            if (this.getDay(date) % 7 === 6) {
                 weeks.push(<div className="board-row">{week}</div>);
                 week = [];
             }
@@ -66,7 +67,7 @@ class Calendar extends Component {
         if (this.getDay(date) !== 0) {
             for (let i = this.getDay(nextMonthDate); i < 7; i++) {
                 if (i === 5 || i === 6) {
-                    week.push(<Cell isWeekend={true} value={i}/>);
+                    week.push(<Cell isWeekend={true} value={nextMonthDate.getDate()}/>);
                 } else {
                     week.push(<Cell notButtonSquare={true} value={nextMonthDate.getDate()}/>);
                 }

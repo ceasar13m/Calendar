@@ -10,13 +10,13 @@ class DaysOfTheWeek extends React.Component {
 
         return (
             <div className={s.boardRow}>
-                <Cell notButtonSquare={true} value="Mon"/>
-                <Cell notButtonSquare={true} value="Tue"/>
-                <Cell notButtonSquare={true} value="Wed"/>
-                <Cell notButtonSquare={true} value="Thu"/>
-                <Cell notButtonSquare={true} value="Fri"/>
-                <Cell notButtonSquare={true} value="Sat"/>
-                <Cell notButtonSquare={true} value="Sun"/>
+                <Cell dateName={true} value="Mon"/>
+                <Cell dateName={true} value="Tue"/>
+                <Cell dateName={true} value="Wed"/>
+                <Cell dateName={true} value="Thu"/>
+                <Cell dateName={true} value="Fri"/>
+                <Cell dateName={true} value="Sat"/>
+                <Cell dateName={true} value="Sun"/>
             </div>
         );
     }
