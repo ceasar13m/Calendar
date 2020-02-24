@@ -1,5 +1,5 @@
 import React from "react";
-import Cell from "../Square/cell";
+import Cell from "../Cell/cell";
 import s from "./daysOfWeek.module.css"
 
 

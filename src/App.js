@@ -52,9 +52,9 @@ class App extends React.Component {
         return (
             <div>
 
-                <LoadingContainer visible={this.state.loading}/>
+                {/*<LoadingContainer visible={this.state.loading}/>*/}
 
-                <EventsWindow  events={this.state.events}/>
+                {/*<EventsWindow  events={this.state.events}/>*/}
 
                 <DateSelect dataController={this.dataController} date={this.state.calendar.date}/>
 

@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import Cell from "./Square/cell";
+import Cell from "./Cell/cell";
 import DaysOfTheWeek from "./Table/daysOfTheWeek";
 
 
@@ -23,32 +23,36 @@ class Calendar extends Component {
         let week = []; //Одна неделя
 
 
-
         let previousMonthDate = new Date(date.getFullYear(), date.getMonth(), 0);
-        let a = previousMonthDate.getDate();
-        let b = this.getDay(previousMonthDate);
+
         //Заполняем таблицу до начала месяца
+
         for (let i = previousMonthDate.getDate() - this.getDay(previousMonthDate); i <= previousMonthDate.getDate(); i++) {
-            debugger;
-            week.push(<Cell notButtonSquare={true} value={i}/>);
+            if (previousMonthDate.getDay() == 0)
+                break;
+
+
+            if (week.length === 5 || week.length === 6) {
+                week.push(<Cell isWeekend={true} value={i}/>);
+            } else
+                week.push(<Cell notButtonSquare={true} value={i}/>);
         }
 
 
-        //Создает недели и добавляем в массив месяца
+        //Создает недели и добавляет в массив месяца
         while (date.getMonth() === mon) {
             let today = new Date();
             if (date.getDate() === today.getDate() &&
                 date.getMonth() === today.getMonth() &&
                 date.getFullYear() === today.getFullYear()) {
                 week.push(<Cell isToday={true} value={date.getDate()}/>);
-            }
-            else if(date.getDay() === 6 || date.getDay() === 0) {
-                week.push(<Cell isWeekend = {true} value={date.getDate()}/>);
+            } else if (date.getDay() === 6 || date.getDay() === 0) {
+                week.push(<Cell isWeekend={true} value={date.getDate()}/>);
             } else {
                 week.push(<Cell value={date.getDate()}/>);
             }
 
-            if (this.getDay(date) % 7 === 6) {
+            if (this.getDay(date) % 7 === 6 || this.getDay(date) === 0) {
                 weeks.push(<div className="board-row">{week}</div>);
                 week = [];
             }
@@ -57,12 +61,15 @@ class Calendar extends Component {
         }
 
 
-
         let nextMonthDate = new Date(date.getFullYear(), date.getMonth());
-        //Заполняет  таблицу до конца строки пустыми ячейками
+        //Заполняет  таблицу до конца
         if (this.getDay(date) !== 0) {
             for (let i = this.getDay(nextMonthDate); i < 7; i++) {
-                week.push(<Cell value={nextMonthDate.getDate()}/>);
+                if (i === 5 || i === 6) {
+                    week.push(<Cell isWeekend={true} value={i}/>);
+                } else {
+                    week.push(<Cell notButtonSquare={true} value={nextMonthDate.getDate()}/>);
+                }
                 nextMonthDate.setDate(nextMonthDate.getDate() + 1);
             }
         }
