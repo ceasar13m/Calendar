@@ -1,6 +1,6 @@
 import React, {Component} from "react";
-import Cell from "./Cell/cell";
-import DaysOfTheWeek from "./Table/daysOfTheWeek";
+import Cell from "../components/Cell/cell";
+import DaysOfTheWeek from "../components/daysOfWeek/daysOfTheWeek";
 
 
 /**
@@ -45,12 +45,12 @@ class Calendar extends Component {
             if (date.getDate() === today.getDate() &&
                 date.getMonth() === today.getMonth() &&
                 date.getFullYear() === today.getFullYear()) {
-                week.push(<Cell isToday={true} value={date.getDate()}/>);
+                week.push(<Cell date={date} isToday={true} value={date.getDate()}/>);
             }
             else if(date.getDay() === 6 || date.getDay() === 0) {
-                week.push(<Cell isWeekend = {true} value={date.getDate()}/>);
+                week.push(<Cell date={date} isWeekend = {true} value={date.getDate()}/>);
             } else {
-                week.push(<Cell value={date.getDate()}/>);
+                week.push(<Cell date={date} value={date.getDate()}/>);
             }
 
             if (this.getDay(date) % 7 === 6) {

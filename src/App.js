@@ -1,11 +1,11 @@
 import React from 'react';
 import s from './App.module.css';
-import Calendar from "./components/calendar";
+import Calendar from "./services/calendar";
 import DateSelect from "./components/selectDate/DateSelect";
 import DataController from "./redux/dataController";
 import LeftButton from "./components/navigationButtons/leftButton/leftButton";
 import RightButton from "./components/navigationButtons/rightButton/rightButton";
-import EventsWindow from "./components/window/events-window";
+import EventsWindow from "./components/window/eventsWindow/events-window";
 
 /**
  * this.state = {
@@ -49,7 +49,7 @@ class App extends React.Component {
 
     render() {
         return (
-            <div>
+            <div id='calendar'>
 
                 <EventsWindow events={this.state.events}/>
 

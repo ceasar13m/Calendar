@@ -6,7 +6,7 @@ class Cell extends React.Component {
     render() {
         if(this.props.isToday){
             return (
-                <button className={s.today} onClick={openModalWindow}>
+                <button className={s.today} onClick={() => {openModalWindow(this.props.date)}}>
                     {this.props.value}
                 </button>
             );
@@ -18,7 +18,7 @@ class Cell extends React.Component {
             );
         }else if(this.props.isWeekend) {
             return (
-                <button className={s.weekend} onClick={openModalWindow}>
+                <button className={s.weekend} onClick={() => {openModalWindow(this.props.date)}}>
                     {this.props.value}
                 </button>
             );
@@ -30,7 +30,7 @@ class Cell extends React.Component {
             );
         } else {
             return (
-                <button className={s.square} onClick={openModalWindow}>
+                <button className={s.square} onClick={() => {openModalWindow(this.props.date)}}>
                     {this.props.value}
                 </button>
             );

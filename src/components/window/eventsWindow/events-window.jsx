@@ -1,7 +1,8 @@
 import React, {Component} from "react";
 import s from "./events-winow.module.css"
-import BackGroundLayer from "./bg-layer";
-import TodoList from "./TodoList";
+import BackGroundLayer from "../bgLayer/bg-layer";
+import MakeList from "./makeList";
+import closeWindow from "../onClickFunctions/closeWindow";
 
 
 class EventsWindow extends Component {
@@ -14,13 +15,6 @@ class EventsWindow extends Component {
     }
 
 
-    closeWindow = () => {
-        let thisWindow = document.getElementById('window');
-        thisWindow.style.display = 'none';
-
-        let bgLayerId = document.getElementById('bgLayerId');
-        bgLayerId.style.display = 'none';
-    }
 
     handleChange(e) {
         this.setState({ text: e.target.value });
@@ -52,15 +46,11 @@ class EventsWindow extends Component {
                         <div className={s.title}>
                             <h3>Events</h3>
                         </div>
-                        <button className={s.closeButton} onClick={this.closeWindow}>X</button>
+                        <button className={s.closeButton} onClick={closeWindow}>X</button>
                     </div>
 
 
                     <div className={s.events}>
-
-                        <div>
-                            Что нужно сделать?
-                        </div>
 
                         <form onSubmit={this.handleSubmit}>
                             <input
@@ -68,12 +58,12 @@ class EventsWindow extends Component {
                                 onChange={this.handleChange}
                                 value={this.state.text}
                             />
-                            <button>
-                                Добавить #{this.state.items.length + 1}
+                            <button className={s.addButton}>
+                                Add
                             </button>
                         </form>
 
-                        <TodoList items={this.state.items} itemNomber = {this.state.items.length + 1}/>
+                        <MakeList items={this.state.items} itemNomber = {this.state.items.length + 1}/>
                     </div>
                 </div>
 

@@ -12,12 +12,13 @@
     margin-top: -20em;
     background-color: white;
 
-    -webkit-box-shadow: 18px 10px 61px -9px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 18px 10px 61px -9px rgba(0, 0, 0, 0.75);
-    box-shadow: 18px 10px 61px -9px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 32px 28px 37px 25px rgba(0,0,0,0.83);
+    -moz-box-shadow: 32px 28px 37px 25px rgba(0,0,0,0.83);
+    box-shadow: 32px 28px 37px 25px rgba(0,0,0,0.83);
 
 
     opacity: 0.999;
+    border-radius: 10px;
 
 }
 
@@ -40,6 +41,7 @@
     margin-top: 1em;
     height: 2em;
     width: 2em;
+    border-radius: 5px;
 }
 
 
@@ -48,11 +50,15 @@
 }
 
 
-/*.bgLayer {*/
-/*    position: absolute;*/
-/*    z-index: 15;*/
-/*    width: 100%;*/
-/*    height: 100%;*/
-/*    background: #000;*/
-/*    opacity: 0.5;*/
-/*}*/
+.addButton {
+    margin-left: 2em;
+    margin-right: 1em;
+    margin-top: 1em;
+    height: 2em;
+    border-radius: 5px;
+}
+
+.delButton {
+    margin-left: 2em;
+    margin-top: 1em;
+}
