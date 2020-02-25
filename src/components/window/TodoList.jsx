@@ -3,11 +3,11 @@ import React from "react";
 class TodoList extends React.Component {
     render() {
         return (
-            <ul>
+            <div>
                 {this.props.items.map(item => (
-                    <li key={item.id}>{item.text}</li>
+                    <div key={item.id}> {item.text}</div>
                 ))}
-            </ul>
+            </div>
         );
     }
 }

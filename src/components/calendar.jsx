@@ -27,7 +27,7 @@ class Calendar extends Component {
 
         let previousMonthDate = new Date(date.getFullYear(), date.getMonth(), 0);
         for (let i = previousMonthDate.getDate() - this.getDay(previousMonthDate); i <= previousMonthDate.getDate(); i++) {
-            if (previousMonthDate.getDay() == 0)
+            if (previousMonthDate.getDay() === 0)
                 break;
 
 

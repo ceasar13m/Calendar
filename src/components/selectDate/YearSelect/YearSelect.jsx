@@ -4,10 +4,6 @@ import s from "./YearSelect.module.css"
 
 class YearSelect extends Component {
 
-    constructor(props) {
-        super(props);
-    }
-
     render() {
 
         let yearClickDown = () => {

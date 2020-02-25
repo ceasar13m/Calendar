@@ -52,16 +52,17 @@ class EventsWindow extends Component {
                         <div className={s.title}>
                             <h3>Events</h3>
                         </div>
-                        <button className={s.closeButton} onClick={this.closeWindow}>x</button>
+                        <button className={s.closeButton} onClick={this.closeWindow}>X</button>
                     </div>
 
 
-                    <div>
-                        <TodoList items={this.state.items} />
+                    <div className={s.events}>
+
+                        <div>
+                            Что нужно сделать?
+                        </div>
+
                         <form onSubmit={this.handleSubmit}>
-                            <label>
-                                Что нужно сделать?
-                            </label>
                             <input
                                 id="new-todo"
                                 onChange={this.handleChange}
@@ -71,6 +72,8 @@ class EventsWindow extends Component {
                                 Добавить #{this.state.items.length + 1}
                             </button>
                         </form>
+
+                        <TodoList items={this.state.items} itemNomber = {this.state.items.length + 1}/>
                     </div>
                 </div>
 

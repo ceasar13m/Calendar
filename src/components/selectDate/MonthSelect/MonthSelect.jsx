@@ -4,9 +4,6 @@ import s from "./MonthSelect.module.css"
 
 class MonthSelect extends Component {
 
-    constructor(props) {
-        super(props);
-    }
 
     render() {
 

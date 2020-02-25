@@ -6,10 +6,6 @@ import YearSelect from "./YearSelect/YearSelect";
 
 class DateSelect extends Component{
 
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         return (
             <div className={s.month}>
