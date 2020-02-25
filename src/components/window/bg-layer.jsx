@@ -6,7 +6,7 @@ class BackGroundLayer extends Component {
 
     render() {
         return (
-            <div className={s.bgLayer}>
+            <div id={'bgLayerId'} className={s.bgLayer}>
 
             </div>
         );

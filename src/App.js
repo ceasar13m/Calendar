@@ -5,9 +5,9 @@ import DateSelect from "./components/selectDate/DateSelect";
 import DataController from "./redux/dataController";
 import LeftButton from "./components/navigationButtons/leftButton/leftButton";
 import RightButton from "./components/navigationButtons/rightButton/rightButton";
-import EventsWindow from "./components/form/events-window";
+import EventsWindow from "./components/window/events-window";
 import LoadingContainer from "./components/loading-container";
-import BackGroundLayer from "./components/form/bg-layer";
+import BackGroundLayer from "./components/window/bg-layer";
 
 /**
  * this.state = {
