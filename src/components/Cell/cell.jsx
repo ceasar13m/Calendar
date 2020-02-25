@@ -10,7 +10,13 @@ class Cell extends React.Component {
                     {this.props.value}
                 </button>
             );
-        } else if(this.props.isWeekend) {
+        } else if (this.props.dateName){
+            return (
+                <button className={s.dateName}>
+                    {this.props.value}
+                </button>
+            );
+        }else if(this.props.isWeekend) {
             return (
                 <button className={s.weekend} onClick={openModalWindow}>
                     {this.props.value}

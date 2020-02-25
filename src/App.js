@@ -7,6 +7,7 @@ import LeftButton from "./components/navigationButtons/leftButton/leftButton";
 import RightButton from "./components/navigationButtons/rightButton/rightButton";
 import EventsWindow from "./components/form/events-window";
 import LoadingContainer from "./components/loading-container";
+import BackGroundLayer from "./components/form/bg-layer";
 
 /**
  * this.state = {
@@ -53,8 +54,9 @@ class App extends React.Component {
             <div>
 
                 {/*<LoadingContainer visible={this.state.loading}/>*/}
+                {/*<BackGroundLayer />*/}
 
-                {/*<EventsWindow  events={this.state.events}/>*/}
+                <EventsWindow events={this.state.events}/>
 
                 <DateSelect dataController={this.dataController} date={this.state.calendar.date}/>
 
