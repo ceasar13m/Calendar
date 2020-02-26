@@ -8,8 +8,28 @@ class DataController {
                 date: new Date()
             },
             events: [],
-            loadings: false
+            loadings: false,
+            window: false,
         }
+    }
+
+
+
+    showWindow() {
+        this.calendarState.window = true;
+
+        this.App.onWindowChanged({
+            window: this.calendarState.window
+        });
+    }
+
+
+    hideWindow() {
+        this.calendarState.window = false;
+
+        this.App.onWindowChanged({
+            window: this.calendarState.window
+        });
     }
 
 

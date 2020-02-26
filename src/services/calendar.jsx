@@ -32,7 +32,7 @@ class Calendar extends Component {
 
 
             if (week.length === 5 || week.length === 6) {
-                week.push(<Cell isWeekend={true} value={i}/>);
+                week.push(<Cell dataController={this.props.dataController} isWeekend={true} value={i}/>);
             } else
                 week.push(<Cell notButtonSquare={true} value={i}/>);
         }
@@ -45,12 +45,12 @@ class Calendar extends Component {
             if (date.getDate() === today.getDate() &&
                 date.getMonth() === today.getMonth() &&
                 date.getFullYear() === today.getFullYear()) {
-                week.push(<Cell date={date} isToday={true} value={date.getDate()}/>);
+                week.push(<Cell dataController={this.props.dataController} date={date} isToday={true} value={date.getDate()}/>);
             }
             else if(date.getDay() === 6 || date.getDay() === 0) {
-                week.push(<Cell date={date} isWeekend = {true} value={date.getDate()}/>);
+                week.push(<Cell dataController={this.props.dataController} date={date} isWeekend = {true} value={date.getDate()}/>);
             } else {
-                week.push(<Cell date={date} value={date.getDate()}/>);
+                week.push(<Cell dataController={this.props.dataController} date={date} value={date.getDate()}/>);
             }
 
             if (this.getDay(date) % 7 === 6) {

@@ -9,15 +9,14 @@ class EventsWindow extends Component {
 
     constructor(props) {
         super(props);
-        this.state = { items: [], text: '' };
+        this.state = {items: [], text: ''};
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
 
-
     handleChange(e) {
-        this.setState({ text: e.target.value });
+        this.setState({text: e.target.value});
     }
 
     handleSubmit(e) {
@@ -40,30 +39,37 @@ class EventsWindow extends Component {
 
         return (
             <div>
-                <BackGroundLayer />
+                <BackGroundLayer dataController={this.props.dataController}/>
+
                 <div id={'window'} className={s.FormContainer}>
                     <div className={s.row}>
                         <div className={s.title}>
                             <h3>Events</h3>
                         </div>
-                        <button className={s.closeButton} onClick={closeWindow}>X</button>
+                        <button className={s.closeButton} onClick={()=> {closeWindow(this.props.dataController)}}>X</button>
+                    </div>
+                    <div className={s.nameModal}>
+                        <h2>22 Февраля 2020</h2>
                     </div>
 
 
                     <div className={s.events}>
 
-                        <form onSubmit={this.handleSubmit}>
-                            <input
-                                id="new-todo"
-                                onChange={this.handleChange}
-                                value={this.state.text}
-                            />
-                            <button className={s.addButton}>
-                                Add
-                            </button>
+                        <form className={s.form} onSubmit={this.handleSubmit}>
+                            <div>
+                                <textarea
+                                    onChange={this.handleChange}
+                                    value={this.state.text}
+                                />
+                            </div>
+                            <div className={s.addButton}>
+                                <button>
+                                    Add
+                                </button>
+                            </div>
                         </form>
 
-                        <MakeList items={this.state.items} itemNomber = {this.state.items.length + 1}/>
+                        <MakeList items={this.state.items} itemNomber={this.state.items.length + 1}/>
                     </div>
                 </div>
 

@@ -1,0 +1,47 @@
+ul {
+    display: grid;
+    justify-content: center;
+
+    overflow: inherit;
+    height: 38vh;
+    width: 65vw;
+    overflow: scroll;
+
+}
+.liList{
+    display: flex;
+    justify-content: space-between;
+
+    width: 100vw;
+    max-width: 60vw;
+
+
+    margin: 5px;
+
+
+}
+.dellButton {
+    height: 2vh;
+    width: 2vw;
+    border-radius: 20px;
+    transition: background-color 0.3s linear;
+    font-size: 10px;
+    line-height: 2vh;
+
+    margin: 5px;
+    outline: none;
+}
+
+.dellButton:hover {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+.liItem {
+    margin: 5px;
+}
+
+.liItem hr {
+    width: 110vh;
+}

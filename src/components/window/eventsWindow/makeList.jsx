@@ -1,13 +1,17 @@
 import React from "react";
-import s from "./events-winow.module.css";
+import s from "./makeList.module.css";
 
 class MakeList extends React.Component {
     render() {
         return (
             <ul>
                 {this.props.items.map(item => (
-                    <li key={item.id}>{item.text} <button className={s.delButton}>X</button></li>
-
+                    <li key={item.id}>
+                        <div className={s.liList}>
+                            <div className={s.liItem}>{item.text}<hr /></div>
+                            <button className={s.dellButton}>X</button>
+                        </div>
+                    </li>
                 ))}
             </ul>
         );

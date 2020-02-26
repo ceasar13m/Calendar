@@ -10,7 +10,7 @@ class BackGroundLayer extends Component {
             <div
                 id={'bgLayerId'}
                 className={s.bgLayer}
-                onClick={closeWindow}/>
+                onClick={()=> {closeWindow(this.props.dataController)}}/>
         );
     }
 

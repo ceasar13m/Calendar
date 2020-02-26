@@ -22,7 +22,6 @@ class App extends React.Component {
         this.dataController = new DataController(this);
         this.state = this.dataController.getState();
         this.onCalendarChanged = this.onCalendarChanged.bind(this);
-        this.state.isWindowVisible = false;
     }
 
 
@@ -48,11 +47,22 @@ class App extends React.Component {
         });
     }
 
+
+
+    onWindowChanged(windowNewState) {
+        this.setState({
+            ...this.state,
+            window: windowNewState
+        });
+        debugger
+    }
+
     render() {
+
         return (
             <div id='calendar'>
 
-                <EventsWindow events={this.state.events}/>
+                { this.state.window ? <EventsWindow dataController={this.dataController} events={this.state.events}/> : null }
 
                 <DateSelect dataController={this.dataController} date={this.state.calendar.date}/>
 
@@ -62,7 +72,7 @@ class App extends React.Component {
                     <LeftButton dataController={this.dataController}/>
 
                     <div className={s.calendarTable}>
-                        <Calendar isWindowVisible = {this.state.isWindowVisible} date={this.state.calendar.date}/>
+                        <Calendar dataController={this.dataController} date={this.state.calendar.date}/>
                     </div>
 
                     <RightButton dataController={this.dataController}/>
@@ -71,7 +81,7 @@ class App extends React.Component {
                 </div>
 
             </div>
-        );
+        )
     }
 }
 
