@@ -22,6 +22,7 @@ class App extends React.Component {
         this.dataController = new DataController(this);
         this.state = this.dataController.getState();
         this.onCalendarChanged = this.onCalendarChanged.bind(this);
+        this.state.isWindowVisible = false;
     }
 
 
@@ -61,7 +62,7 @@ class App extends React.Component {
                     <LeftButton dataController={this.dataController}/>
 
                     <div className={s.calendarTable}>
-                        <Calendar date={this.state.calendar.date}/>
+                        <Calendar isWindowVisible = {this.state.isWindowVisible} date={this.state.calendar.date}/>
                     </div>
 
                     <RightButton dataController={this.dataController}/>
