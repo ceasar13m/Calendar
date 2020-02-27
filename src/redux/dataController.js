@@ -17,7 +17,7 @@ class DataController {
 
     showWindow() {
         this.calendarState.window = true;
-
+debugger
         this.App.onWindowChanged({
             window: this.calendarState.window
         });
@@ -26,7 +26,7 @@ class DataController {
 
     hideWindow() {
         this.calendarState.window = false;
-
+debugger
         this.App.onWindowChanged({
             window: this.calendarState.window
         });

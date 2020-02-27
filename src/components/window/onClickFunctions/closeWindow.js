@@ -1,7 +1,6 @@
 
 let closeWindow = (dataController) => {
     dataController.hideWindow();
-    debugger
 }
 
 

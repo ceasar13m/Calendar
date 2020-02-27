@@ -1,5 +1,3 @@
-
-
 let openModalWindow = (dataController) => {
     dataController.showWindow();
 }

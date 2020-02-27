@@ -54,7 +54,6 @@ class App extends React.Component {
             ...this.state,
             window: windowNewState
         });
-        debugger
     }
 
     render() {
@@ -62,7 +61,7 @@ class App extends React.Component {
         return (
             <div id='calendar'>
 
-                { this.state.window ? <EventsWindow dataController={this.dataController} events={this.state.events}/> : null }
+                <EventsWindow window = {this.state.window} dataController={this.dataController} events={this.state.events}/>
 
                 <DateSelect dataController={this.dataController} date={this.state.calendar.date}/>
 

@@ -36,12 +36,12 @@ class EventsWindow extends Component {
 
     render() {
 
-
+        let style = this.props.window ? {display:'block'} : {display:'none'};
         return (
-            <div>
-                <BackGroundLayer dataController={this.props.dataController}/>
+            <div style={style}>
+                {/*<BackGroundLayer dataController={this.props.dataController}/>*/}
 
-                <div id={'window'} className={s.FormContainer}>
+                <div className={s.FormContainer}>
                     <div className={s.row}>
                         <div className={s.title}>
                             <h3>Events</h3>
