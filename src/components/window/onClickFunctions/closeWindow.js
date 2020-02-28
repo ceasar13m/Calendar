@@ -1,6 +1,6 @@
 
 let closeWindow = (dataController) => {
-    dataController.hideWindow();
+    dataController.hideEventsWindow();
 }
 
 

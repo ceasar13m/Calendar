@@ -15,7 +15,7 @@ class DataController {
 
 
 
-    showWindow(date) {
+    showEventsWindow(date) {
         this.calendarState.window = true;
 
         this.App.onWindowChanged({
@@ -25,7 +25,7 @@ class DataController {
     }
 
 
-    hideWindow() {
+    hideEventsWindow() {
         this.calendarState.window = false;
 
         this.App.onWindowChanged({

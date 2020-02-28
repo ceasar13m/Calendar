@@ -46,7 +46,7 @@ class EventsWindow extends Component {
                         <div className={s.title}>
                             <h3>Events</h3>
                         </div>
-                        <button className={s.closeButton} onClick={()=> {closeWindow(this.props.dataController)}}>X</button>
+                        <button className={s.closeButton} onClick={()=> {this.props.dataController.hideEventsWindow()}}>X</button>
                     </div>
                     <div className={s.nameModal}>
                         <h1>

@@ -8,7 +8,7 @@ class Cell extends React.Component {
             debugger
             return (
                 <button className={s.today} onClick={() => {
-                    openModalWindow(this.props.dataController)
+                    this.props.dataController.showEventsWindow(this.props.date);
                 }}>
                     {this.props.date.getDate()}
                 </button>
@@ -22,7 +22,7 @@ class Cell extends React.Component {
         } else if (this.props.isWeekend) {
             return (
                 <button className={s.weekend} onClick={() => {
-                    this.props.dataController.showWindow(this.props.date);
+                    this.props.dataController.showEventsWindow(this.props.date);
                 }}>
                     {this.props.date.getDate()}
                 </button>
@@ -42,7 +42,7 @@ class Cell extends React.Component {
         } else {
             return (
                 <button className={s.square} onClick={() => {
-                    this.props.dataController.showWindow(this.props.date);
+                    this.props.dataController.showEventsWindow(this.props.date);
                 }}>
                     {this.props.date.getDate()}
                 </button>
