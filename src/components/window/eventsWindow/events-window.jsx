@@ -39,7 +39,7 @@ class EventsWindow extends Component {
         let style = this.props.window ? {display:'block'} : {display:'none'};
         return (
             <div style={style}>
-                {/*<BackGroundLayer dataController={this.props.dataController}/>*/}
+                <BackGroundLayer dataController={this.props.dataController}/>
 
                 <div className={s.FormContainer}>
                     <div className={s.row}>
@@ -49,7 +49,11 @@ class EventsWindow extends Component {
                         <button className={s.closeButton} onClick={()=> {closeWindow(this.props.dataController)}}>X</button>
                     </div>
                     <div className={s.nameModal}>
-                        <h2>22 Февраля 2020</h2>
+                        <h1>
+                            {this.props.date.getDate() + ' '}
+                            {((this.props.date.getMonth() < 10) ?  ('0' + this.props.date.getMonth()) : (this.props.date.getMonth()) )+ ' '}
+                            {this.props.date.getFullYear()}
+                        </h1>
                     </div>
 
 

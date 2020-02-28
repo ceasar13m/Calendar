@@ -15,18 +15,19 @@ class DataController {
 
 
 
-    showWindow() {
+    showWindow(date) {
         this.calendarState.window = true;
-debugger
+
         this.App.onWindowChanged({
-            window: this.calendarState.window
+            window: this.calendarState.window,
+            date : date
         });
     }
 
 
     hideWindow() {
         this.calendarState.window = false;
-debugger
+
         this.App.onWindowChanged({
             window: this.calendarState.window
         });

@@ -32,7 +32,7 @@ class Calendar extends Component {
 
 
             if (week.length === 5 || week.length === 6) {
-                week.push(<Cell dataController={this.props.dataController} isWeekend={true} value={i}/>);
+                week.push(<Cell dataController={this.props.dataController} notButtonIsWeekend={true} value={i}/>);
             } else
                 week.push(<Cell notButtonSquare={true} value={i}/>);
         }
@@ -41,16 +41,17 @@ class Calendar extends Component {
 
         //Создает недели и добавляем в массив месяца
         while (date.getMonth() === mon) {
+            let tempDate = new Date(date.getFullYear(), date.getMonth(), date.getDate());
             let today = new Date();
             if (date.getDate() === today.getDate() &&
                 date.getMonth() === today.getMonth() &&
                 date.getFullYear() === today.getFullYear()) {
-                week.push(<Cell dataController={this.props.dataController} date={date} isToday={true} value={date.getDate()}/>);
+                week.push(<Cell dataController={this.props.dataController} date={tempDate} isToday={true} value={date.getDate()}/>);
             }
             else if(date.getDay() === 6 || date.getDay() === 0) {
-                week.push(<Cell dataController={this.props.dataController} date={date} isWeekend = {true} value={date.getDate()}/>);
+                week.push(<Cell dataController={this.props.dataController} date={tempDate} isWeekend = {true} value={date.getDate()}/>);
             } else {
-                week.push(<Cell dataController={this.props.dataController} date={date} value={date.getDate()}/>);
+                week.push(<Cell dataController={this.props.dataController} date={tempDate} value={date.getDate()}/>);
             }
 
             if (this.getDay(date) % 7 === 6) {
@@ -67,7 +68,7 @@ class Calendar extends Component {
         if (this.getDay(date) !== 0) {
             for (let i = this.getDay(nextMonthDate); i < 7; i++) {
                 if (i === 5 || i === 6) {
-                    week.push(<Cell isWeekend={true} value={nextMonthDate.getDate()}/>);
+                    week.push(<Cell notButtonIsWeekend={true}  value={nextMonthDate.getDate()}/>);
                 } else {
                     week.push(<Cell notButtonSquare={true} value={nextMonthDate.getDate()}/>);
                 }

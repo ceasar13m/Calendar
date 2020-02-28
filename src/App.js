@@ -52,7 +52,8 @@ class App extends React.Component {
     onWindowChanged(windowNewState) {
         this.setState({
             ...this.state,
-            window: windowNewState
+            window: windowNewState.window,
+            date: windowNewState.date
         });
     }
 
@@ -61,7 +62,7 @@ class App extends React.Component {
         return (
             <div id='calendar'>
 
-                <EventsWindow window = {this.state.window} dataController={this.dataController} events={this.state.events}/>
+                <EventsWindow date = {this.state.calendar.date} window = {this.state.window} dataController={this.dataController} events={this.state.events}/>
 
                 <DateSelect dataController={this.dataController} date={this.state.calendar.date}/>
 
