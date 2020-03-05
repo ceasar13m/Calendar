@@ -1,16 +1,19 @@
 ul {
     display: grid;
     justify-content: center;
-
+/*margin: 0 auto;*/
     overflow: inherit;
     height: 38vh;
     width: 65vw;
     overflow: scroll;
 
+
+    word-wrap: break-word;
+
 }
 .liList{
     display: flex;
-    justify-content: space-between;
+    /*justify-content: space-between;*/
 
     width: 100vw;
     max-width: 60vw;

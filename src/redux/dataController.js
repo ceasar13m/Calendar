@@ -11,33 +11,41 @@ class DataController {
             loadings: false,
             window: false,
         }
-    }
 
+    }
 
 
     showEventsWindow(date) {
         this.calendarState.window = true;
+        this.calendarState.calendar.date = date;
 
         this.App.onWindowChanged({
             window: this.calendarState.window,
-            date : date
+            calendar: {
+                date: date
+            }
         });
+
+
     }
 
 
-    hideEventsWindow() {
+    hideEventsWindow(events) {
         this.calendarState.window = false;
 
         this.App.onWindowChanged({
-            window: this.calendarState.window
+            window: this.calendarState.window,
+            calendar: this.calendarState.calendar,
+            events: events
         });
+        debugger
     }
 
 
     monthIncr() {
         this.calendarState.calendar.date = new Date(
             this.calendarState.calendar.date.getFullYear(),
-            this.calendarState.calendar.date.getMonth() + 1
+            this.calendarState.calendar.date.getMonth() + 1,
         );
 
         this.App.onCalendarChanged({
@@ -48,7 +56,7 @@ class DataController {
     monthDecr() {
         this.calendarState.calendar.date = new Date(
             this.calendarState.calendar.date.getFullYear(),
-            this.calendarState.calendar.date.getMonth() - 1
+            this.calendarState.calendar.date.getMonth() - 1,
         );
 
         this.App.onCalendarChanged({

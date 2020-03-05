@@ -10,8 +10,7 @@ class LeftButton extends Component {
 
     click = () => {
         this.props.dataController.monthDecr();
-    }
-
+    };
 
     render() {
         return (

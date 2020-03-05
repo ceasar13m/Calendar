@@ -1,6 +1,5 @@
 import React, {Component} from "react";
 import s from "./bg-layer.module.css"
-import closeWindow from "../onClickFunctions/closeWindow";
 
 
 class BackGroundLayer extends Component {

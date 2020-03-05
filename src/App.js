@@ -14,6 +14,7 @@ import EventsWindow from "./components/window/eventsWindow/events-window";
             },
             events: [],
             loadings: true/false
+            window: true/false
         }
  */
 class App extends React.Component {
@@ -53,7 +54,7 @@ class App extends React.Component {
         this.setState({
             ...this.state,
             window: windowNewState.window,
-            date: windowNewState.date
+            calendar: windowNewState.calendar
         });
     }
 
@@ -82,6 +83,8 @@ class App extends React.Component {
 
             </div>
         )
+
+
     }
 }
 

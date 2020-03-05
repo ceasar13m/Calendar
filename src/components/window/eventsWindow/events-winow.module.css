@@ -16,9 +16,9 @@ h3 {
     background-color: white;
     border-radius: 5px;
 
-    -webkit-box-shadow: 32px 28px 37px 25px rgba(0,0,0,0.83);
-    -moz-box-shadow: 32px 28px 37px 25px rgba(0,0,0,0.83);
-    box-shadow: 32px 28px 37px 25px rgba(0,0,0,0.83);
+    -webkit-box-shadow: 16px 13px 15px -4px rgba(0,0,0,0.75);
+    -moz-box-shadow: 16px 13px 15px -4px rgba(0,0,0,0.75);
+    box-shadow: 16px 13px 15px -4px rgba(0,0,0,0.75);
 
 
     opacity: 0.99;

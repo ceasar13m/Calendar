@@ -2,14 +2,16 @@ import React, {Component} from "react";
 import s from "./events-winow.module.css"
 import BackGroundLayer from "../bgLayer/bg-layer";
 import MakeList from "./makeList";
-import closeWindow from "../onClickFunctions/closeWindow";
 
 
 class EventsWindow extends Component {
 
     constructor(props) {
         super(props);
-        this.state = {items: [], text: ''};
+        this.state = {
+            items: [],
+            text: '',
+        };
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
@@ -35,30 +37,27 @@ class EventsWindow extends Component {
     }
 
     render() {
-
         let style = this.props.window ? {display:'block'} : {display:'none'};
         return (
             <div style={style}>
                 <BackGroundLayer dataController={this.props.dataController}/>
-
                 <div className={s.FormContainer}>
                     <div className={s.row}>
                         <div className={s.title}>
                             <h3>Events</h3>
                         </div>
-                        <button className={s.closeButton} onClick={()=> {this.props.dataController.hideEventsWindow()}}>X</button>
+                        <button className={s.closeButton}
+                                onClick={()=> {this.props.dataController.hideEventsWindow(this.state.items)}}>X</button>
                     </div>
                     <div className={s.nameModal}>
                         <h1>
-                            {this.props.date.getDate() + ' '}
-                            {((this.props.date.getMonth() < 10) ?  ('0' + this.props.date.getMonth()) : (this.props.date.getMonth()) )+ ' '}
+                            {this.props.date.getDate() + '.'}
+                            {((this.props.date.getMonth() < 10) ?  ('0' + (this.props.date.getMonth() + 1)) : (this.props.date.getMonth()) )+ '.'}
                             {this.props.date.getFullYear()}
                         </h1>
                     </div>
 
-
                     <div className={s.events}>
-
                         <form className={s.form} onSubmit={this.handleSubmit}>
                             <div>
                                 <textarea
@@ -73,7 +72,7 @@ class EventsWindow extends Component {
                             </div>
                         </form>
 
-                        <MakeList items={this.state.items} itemNomber={this.state.items.length + 1}/>
+                        <MakeList items={this.state.items} itemNumber={this.state.items.length + 1}/>
                     </div>
                 </div>
 
