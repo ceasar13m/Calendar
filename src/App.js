@@ -12,7 +12,7 @@ import EventsWindow from "./components/window/eventsWindow/events-window";
             calendar: {
                 date: new Date()
             },
-            events: [],
+            monthEvents: [],
             loadings: true/false
             window: true/false
         }
@@ -49,12 +49,11 @@ class App extends React.Component {
     }
 
 
-
     onWindowChanged(windowNewState) {
         this.setState({
             ...this.state,
             window: windowNewState.window,
-            calendar: windowNewState.calendar
+            calendar: windowNewState.calendar,
         });
     }
 
@@ -63,7 +62,11 @@ class App extends React.Component {
         return (
             <div id='calendar'>
 
-                <EventsWindow date = {this.state.calendar.date} window = {this.state.window} dataController={this.dataController} events={this.state.events}/>
+                <EventsWindow date = {this.state.calendar.date} window={this.state.window} dataController={this.dataController}
+                              events={this.state.monthEvents.find(item => (
+                                  item.date.getMonth() === this.state.calendar.date.getMonth() &&
+                                  item.date.getDate() === this.state.calendar.date.getDate() &&
+                                  item.date.getFullYear() === this.state.calendar.date.getFullYear()))}/>
 
                 <DateSelect dataController={this.dataController} date={this.state.calendar.date}/>
 

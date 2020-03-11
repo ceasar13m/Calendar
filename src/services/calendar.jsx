@@ -76,9 +76,9 @@ class Calendar extends Component {
         if (this.getDay(date) !== 0) {
             for (let i = this.getDay(nextMonthDate); i < 7; i++) {
                 if (i === 5 || i === 6) {
-                    week.push(<Cell date = {date} notButtonIsWeekend={true} value={nextMonthDate.getDate()}/>);
+                    week.push(<Cell  notButtonIsWeekend={true} value={nextMonthDate.getDate()}/>);
                 } else {
-                    week.push(<Cell date = {date} notButtonSquare={true} value={nextMonthDate.getDate()}/>);
+                    week.push(<Cell  notButtonSquare={true} value={nextMonthDate.getDate()}/>);
                 }
                 nextMonthDate.setDate(nextMonthDate.getDate() + 1);
             }

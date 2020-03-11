@@ -1,10 +1,18 @@
 [
   {
     "date": "",
-    "events": [
+    "users": [
       {
-        "eventId": 1212,
-        "description": "Текст события.."
+        "login": 1212,
+        "password": "Текст события.."
+      },
+      {
+        "login": 1212,
+        "password": "Текст события.."
+      },
+      {
+        "login": 1212,
+        "password": "Текст события.."
       }
     ]
   },

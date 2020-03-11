@@ -5,10 +5,27 @@ class MakeList extends React.Component {
     render() {
         return (
             <ul>
+
+                {/*{this.props.events.descriptions.map(event => (*/}
+                {/*    <li>*/}
+                {/*        <div className={s.liList}>*/}
+                {/*            <div className={s.liItem}>{event? event: null}*/}
+                {/*                <hr/>*/}
+                {/*            </div>*/}
+                {/*            <button className={s.dellButton}>X</button>*/}
+                {/*        </div>*/}
+                {/*    </li>*/}
+
+                {/*))}*/}
+
                 {this.props.items.map(item => (
                     <li key={item.id}>
+
+
                         <div className={s.liList}>
-                            <div className={s.liItem}>{item.text}<hr /></div>
+                            <div className={s.liItem}>{item.description}
+                                <hr/>
+                            </div>
                             <button className={s.dellButton}>X</button>
                         </div>
                     </li>

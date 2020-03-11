@@ -2,9 +2,11 @@ import React, {Component} from "react";
 import s from "./events-winow.module.css"
 import BackGroundLayer from "../bgLayer/bg-layer";
 import MakeList from "./makeList";
+import {addEvent} from "../../../services/network-service";
 
 
 class EventsWindow extends Component {
+
 
     constructor(props) {
         super(props);
@@ -26,18 +28,19 @@ class EventsWindow extends Component {
         if (!this.state.text.length) {
             return;
         }
-        const newItem = {
-            text: this.state.text,
-            id: Date.now()
+        const newEvent = {
+            description: this.state.text,
+            date: new Date(),
         };
+        addEvent(newEvent);
         this.setState(state => ({
-            items: state.items.concat(newItem),
+            items: state.items.concat(newEvent),
             text: ''
         }));
     }
 
     render() {
-        let style = this.props.window ? {display:'block'} : {display:'none'};
+        let style = this.props.window ? {display: 'block'} : {display: 'none'};
         return (
             <div style={style}>
                 <BackGroundLayer dataController={this.props.dataController}/>
@@ -47,12 +50,20 @@ class EventsWindow extends Component {
                             <h3>Events</h3>
                         </div>
                         <button className={s.closeButton}
-                                onClick={()=> {this.props.dataController.hideEventsWindow(this.state.items)}}>X</button>
+                                onClick={() => {
+                                    this.props.dataController.hideEventsWindow(
+                                        {
+                                            date: this.props.date,
+                                            events: this.state.items
+                                        }
+                                    )
+                                }}>X
+                        </button>
                     </div>
                     <div className={s.nameModal}>
                         <h1>
                             {this.props.date.getDate() + '.'}
-                            {((this.props.date.getMonth() < 10) ?  ('0' + (this.props.date.getMonth() + 1)) : (this.props.date.getMonth()) )+ '.'}
+                            {((this.props.date.getMonth() < 10) ? ('0' + (this.props.date.getMonth() + 1)) : (this.props.date.getMonth())) + '.'}
                             {this.props.date.getFullYear()}
                         </h1>
                     </div>
@@ -60,7 +71,7 @@ class EventsWindow extends Component {
                     <div className={s.events}>
                         <form className={s.form} onSubmit={this.handleSubmit}>
                             <div>
-                                <textarea
+                                <input
                                     onChange={this.handleChange}
                                     value={this.state.text}
                                 />
@@ -72,7 +83,8 @@ class EventsWindow extends Component {
                             </div>
                         </form>
 
-                        <MakeList items={this.state.items} itemNumber={this.state.items.length + 1}/>
+
+                        <MakeList items={this.state.items} events={this.props.events}/>
                     </div>
                 </div>
 

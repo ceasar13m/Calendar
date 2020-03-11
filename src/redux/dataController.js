@@ -1,3 +1,5 @@
+import {getEventsForMonth} from "../services/network-service";
+
 class DataController {
 
 
@@ -7,7 +9,12 @@ class DataController {
             calendar: {
                 date: new Date()
             },
-            events: [],
+            monthEvents: [
+                {
+                    date: new Date(2020, 2, 8),
+                    descriptions: ['New year', 'Hello Kitty']
+                },
+            ],
             loadings: false,
             window: false,
         }
@@ -16,6 +23,7 @@ class DataController {
 
 
     showEventsWindow(date) {
+        debugger
         this.calendarState.window = true;
         this.calendarState.calendar.date = date;
 
@@ -23,7 +31,7 @@ class DataController {
             window: this.calendarState.window,
             calendar: {
                 date: date
-            }
+            },
         });
 
 
@@ -31,14 +39,15 @@ class DataController {
 
 
     hideEventsWindow(events) {
+        debugger
         this.calendarState.window = false;
+        this.calendarState.events = events;
 
         this.App.onWindowChanged({
             window: this.calendarState.window,
             calendar: this.calendarState.calendar,
-            events: events
+            monthEvents: this.calendarState.monthEvents.push(events)
         });
-        debugger
     }
 
 
@@ -48,9 +57,12 @@ class DataController {
             this.calendarState.calendar.date.getMonth() + 1,
         );
 
+
         this.App.onCalendarChanged({
             date: this.calendarState.calendar.date
         });
+
+        getEventsForMonth(this.calendarState.calendar.date);
     }
 
     monthDecr() {

@@ -2,20 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ad33f94e-3a00-4f36-b598-208d472f6646" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/cell/daysNameCell.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/cell/cell.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cell/cell.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/cell/cell.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cell/cell.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/cell/dayButtonOnClick.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/daysOfWeek/daysOfTheWeek.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/daysOfWeek/daysOfTheWeek.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/navigationButtons/leftButton/leftButton.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navigationButtons/leftButton/leftButton.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/window/bgLayer/bg-layer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/window/bgLayer/bg-layer.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/window/eventsWindow/events-window.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/window/eventsWindow/events-window.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/window/eventsWindow/events-winow.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/window/eventsWindow/events-winow.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/window/eventsWindow/makeList.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/window/eventsWindow/makeList.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/window/onClickFunctions/closeWindow.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/window/eventsWindow/makeList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/window/eventsWindow/makeList.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/dataController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/dataController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/abc.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/abc.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/calendar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/calendar.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/network-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/network-service.js" afterDir="false" />
     </list>
@@ -141,7 +134,11 @@
       <workItem from="1583255739534" duration="4576000" />
       <workItem from="1583263278064" duration="161000" />
       <workItem from="1583344855429" duration="7394000" />
-      <workItem from="1583414721115" duration="13956000" />
+      <workItem from="1583414721115" duration="14058000" />
+      <workItem from="1583500789528" duration="22015000" />
+      <workItem from="1583752019036" duration="12471000" />
+      <workItem from="1583863588731" duration="1458000" />
+      <workItem from="1583949853934" duration="3575000" />
     </task>
     <task id="LOCAL-00001" summary="0.1">
       <created>1581879752682</created>
@@ -262,7 +259,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582915946029</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="0.1.8&#10;&#10;Даты отображаются корректно.">
+      <created>1583441187192</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1583441187192</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -306,7 +310,8 @@
     <MESSAGE value="0.1.4&#10;&#10;Окно закрывается при нажатии на кнопку закрытия и при клике вне окна" />
     <MESSAGE value="0.1.5&#10;&#10;Окно открывается при нажатии на даты" />
     <MESSAGE value="0.1.7&#10;&#10;Окно открывается и закрывается" />
-    <option name="LAST_COMMIT_MESSAGE" value="0.1.7&#10;&#10;Окно открывается и закрывается" />
+    <MESSAGE value="0.1.8&#10;&#10;Даты отображаются корректно." />
+    <option name="LAST_COMMIT_MESSAGE" value="0.1.8&#10;&#10;Даты отображаются корректно." />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="182" key="#ESLint" timestamp="1582463569022">
@@ -321,10 +326,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="271" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1583002226076" />
-    <state x="598" y="119" key="CommitChangelistDialog2" timestamp="1582915944525">
+    <state x="598" y="119" key="CommitChangelistDialog2" timestamp="1583441186225">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="598" y="119" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1582915944525" />
+    <state x="598" y="119" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1583441186225" />
     <state x="92" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1582913691108">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -345,14 +350,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="681" y="261" width="540" height="524" key="StructurePopup/0.0.1920.1040@0.0.1920.1040" timestamp="1583088758449" />
-    <state x="552" y="257" key="Vcs.Push.Dialog.v2" timestamp="1582915956547">
+    <state x="552" y="257" key="Vcs.Push.Dialog.v2" timestamp="1583441196022">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="257" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1582915956547" />
-    <state x="43" y="447" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1583427947463">
+    <state x="552" y="257" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1583441196022" />
+    <state x="29" y="129" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1583764338951">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="43" y="447" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1583427947463" />
+    <state x="29" y="129" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1583764338951" />
     <state x="771" y="440" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1582913819122">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
