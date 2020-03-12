@@ -63,10 +63,7 @@ class App extends React.Component {
             <div id='calendar'>
 
                 <EventsWindow date = {this.state.calendar.date} window={this.state.window} dataController={this.dataController}
-                              events={this.state.monthEvents.find(item => (
-                                  item.date.getMonth() === this.state.calendar.date.getMonth() &&
-                                  item.date.getDate() === this.state.calendar.date.getDate() &&
-                                  item.date.getFullYear() === this.state.calendar.date.getFullYear()))}/>
+                              monthEvents={this.state.monthEvents}/>
 
                 <DateSelect dataController={this.dataController} date={this.state.calendar.date}/>
 

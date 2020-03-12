@@ -2,7 +2,6 @@ import React, {Component} from "react";
 import s from "./events-winow.module.css"
 import BackGroundLayer from "../bgLayer/bg-layer";
 import MakeList from "./makeList";
-import {addEvent} from "../../../services/network-service";
 
 
 class EventsWindow extends Component {
@@ -10,12 +9,27 @@ class EventsWindow extends Component {
 
     constructor(props) {
         super(props);
+
+        this.events = [];
+
+        for (let i = 0; i < this.props.monthEvents.length; i++) {
+            if (this.props.monthEvents[i].date.getMonth() === this.props.date.getMonth() &&
+                this.props.monthEvents[i].date.getDate() === this.props.date.getDate() &&
+                this.props.monthEvents[i].date.getFullYear() === this.props.date.getFullYear()) {
+
+                this.events.push(this.props.monthEvents[i].descriptions);
+            }
+
+        }
+
         this.state = {
-            items: [],
+            descriptions: this.events,
             text: '',
         };
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+
+
     }
 
 
@@ -29,12 +43,12 @@ class EventsWindow extends Component {
             return;
         }
         const newEvent = {
+            date: this.props.date,
             description: this.state.text,
-            date: new Date(),
         };
-        addEvent(newEvent);
+
         this.setState(state => ({
-            items: state.items.concat(newEvent),
+            descriptions: state.descriptions.concat(newEvent),
             text: ''
         }));
     }
@@ -54,7 +68,7 @@ class EventsWindow extends Component {
                                     this.props.dataController.hideEventsWindow(
                                         {
                                             date: this.props.date,
-                                            events: this.state.items
+                                            descriptions: this.state.descriptions
                                         }
                                     )
                                 }}>X
@@ -84,7 +98,7 @@ class EventsWindow extends Component {
                         </form>
 
 
-                        <MakeList items={this.state.items} events={this.props.events}/>
+                        <MakeList events={this.state.descriptions}/>
                     </div>
                 </div>
 

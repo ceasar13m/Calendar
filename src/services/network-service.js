@@ -1,10 +1,10 @@
-export async function getEventsForMonth(date) {
+export function getEventsForMonth(date) {
     let requestBody = {
         date: date
     };
 
 
-    let response = await fetch('http://localhost:8080/get-month-events', {
+    let response = fetch('http://localhost:8080/get-month-events', {
         method: 'POST',
         body: JSON.stringify(requestBody)
     });
@@ -16,11 +16,11 @@ export async function getEventsForMonth(date) {
 
 
 
-export async function addEvent(event) {
+export  function addEvent(events) {
 
-    let response = await fetch('http://localhost:8080/add-event', {
+    let response = fetch('http://localhost:8080/add-event', {
         method: 'POST',
-        body: JSON.stringify(event)
+        body: JSON.stringify(events)
     });
 
     let json =  response.status;

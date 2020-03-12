@@ -5,11 +5,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/window/eventsWindow/events-window.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/window/eventsWindow/events-window.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/window/eventsWindow/events-winow.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/window/eventsWindow/events-winow.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/window/eventsWindow/makeList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/window/eventsWindow/makeList.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/dataController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/dataController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/abc.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/abc.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/calendar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/calendar.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/network-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/network-service.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -138,7 +135,9 @@
       <workItem from="1583500789528" duration="22015000" />
       <workItem from="1583752019036" duration="12471000" />
       <workItem from="1583863588731" duration="1458000" />
-      <workItem from="1583949853934" duration="3575000" />
+      <workItem from="1583949853934" duration="3669000" />
+      <workItem from="1584021597666" duration="1824000" />
+      <workItem from="1584039042360" duration="6649000" />
     </task>
     <task id="LOCAL-00001" summary="0.1">
       <created>1581879752682</created>
@@ -266,7 +265,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583441187192</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="0.2.0&#10;&#10;Взаимодействие с бэкендом">
+      <created>1583955801136</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1583955801136</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -311,7 +317,8 @@
     <MESSAGE value="0.1.5&#10;&#10;Окно открывается при нажатии на даты" />
     <MESSAGE value="0.1.7&#10;&#10;Окно открывается и закрывается" />
     <MESSAGE value="0.1.8&#10;&#10;Даты отображаются корректно." />
-    <option name="LAST_COMMIT_MESSAGE" value="0.1.8&#10;&#10;Даты отображаются корректно." />
+    <MESSAGE value="0.2.0&#10;&#10;Взаимодействие с бэкендом" />
+    <option name="LAST_COMMIT_MESSAGE" value="0.2.0&#10;&#10;Взаимодействие с бэкендом" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="182" key="#ESLint" timestamp="1582463569022">
@@ -326,10 +333,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="271" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1583002226076" />
-    <state x="598" y="119" key="CommitChangelistDialog2" timestamp="1583441186225">
+    <state x="598" y="119" key="CommitChangelistDialog2" timestamp="1583955800081">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="598" y="119" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1583441186225" />
+    <state x="598" y="119" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1583955800081" />
     <state x="92" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1582913691108">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -350,10 +357,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="681" y="261" width="540" height="524" key="StructurePopup/0.0.1920.1040@0.0.1920.1040" timestamp="1583088758449" />
-    <state x="552" y="257" key="Vcs.Push.Dialog.v2" timestamp="1583441196022">
+    <state x="552" y="257" key="Vcs.Push.Dialog.v2" timestamp="1583955810384">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="257" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1583441196022" />
+    <state x="552" y="257" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1583955810384" />
     <state x="29" y="129" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1583764338951">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

@@ -1,4 +1,4 @@
-import {getEventsForMonth} from "../services/network-service";
+import {addEvent, getEventsForMonth} from "../services/network-service";
 
 class DataController {
 
@@ -12,7 +12,12 @@ class DataController {
             monthEvents: [
                 {
                     date: new Date(2020, 2, 8),
-                    descriptions: ['New year', 'Hello Kitty']
+                    descriptions: [
+                        {
+                            date: new Date(),
+                            descriptions: ["Hello", "Bye"]
+                        }
+                    ]
                 },
             ],
             loadings: false,
@@ -23,7 +28,6 @@ class DataController {
 
 
     showEventsWindow(date) {
-        debugger
         this.calendarState.window = true;
         this.calendarState.calendar.date = date;
 
@@ -39,15 +43,16 @@ class DataController {
 
 
     hideEventsWindow(events) {
-        debugger
         this.calendarState.window = false;
-        this.calendarState.events = events;
+        this.calendarState.monthEvents.push(events)
 
         this.App.onWindowChanged({
             window: this.calendarState.window,
             calendar: this.calendarState.calendar,
-            monthEvents: this.calendarState.monthEvents.push(events)
+            monthEvents: this.calendarState.monthEvents
         });
+
+        addEvent(events);
     }
 
 
@@ -74,6 +79,7 @@ class DataController {
         this.App.onCalendarChanged({
             date: this.calendarState.calendar.date
         });
+        getEventsForMonth(this.calendarState.calendar.date);
     }
 
     yearIncr() {
@@ -85,6 +91,7 @@ class DataController {
         this.App.onCalendarChanged({
             date: this.calendarState.calendar.date
         });
+        getEventsForMonth(this.calendarState.calendar.date);
     }
 
     yearDecr() {
@@ -96,6 +103,7 @@ class DataController {
         this.App.onCalendarChanged({
             date: this.calendarState.calendar.date
         });
+        getEventsForMonth(this.calendarState.calendar.date);
     }
 
 

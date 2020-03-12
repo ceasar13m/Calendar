@@ -6,7 +6,7 @@ class MakeList extends React.Component {
         return (
             <ul>
 
-                {/*{this.props.events.descriptions.map(event => (*/}
+                {/*{this.props.items.map(event => (*/}
                 {/*    <li>*/}
                 {/*        <div className={s.liList}>*/}
                 {/*            <div className={s.liItem}>{event? event: null}*/}
@@ -18,7 +18,7 @@ class MakeList extends React.Component {
 
                 {/*))}*/}
 
-                {this.props.items.map(item => (
+                {this.props.events.map(item => (
                     <li key={item.id}>
 
 
