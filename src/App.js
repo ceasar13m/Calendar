@@ -29,16 +29,25 @@ class App extends React.Component {
     onCalendarChanged(calendarNewState) {
         this.setState({
             ...this.state,
-            calendar: calendarNewState
+            calendar: calendarNewState.date,
         });
     }
 
-    onEventsWindowChanged(eventsNewState) {
+
+    onMonthEventsChanged(calendarNewState) {
         this.setState({
             ...this.state,
-            events: eventsNewState
+            calendar: calendarNewState.calendar,
+            monthEvents: calendarNewState,
         });
     }
+
+    // onEventsWindowChanged(eventsNewState) {
+    //     this.setState({
+    //         ...this.state,
+    //         events: eventsNewState
+    //     });
+    // }
 
 
     onEventsLoaderChanged(loadingNewState) {

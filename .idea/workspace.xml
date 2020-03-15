@@ -4,8 +4,6 @@
     <list default="true" id="ad33f94e-3a00-4f36-b598-208d472f6646" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/window/eventsWindow/events-window.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/window/eventsWindow/events-window.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/window/eventsWindow/makeList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/window/eventsWindow/makeList.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/dataController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/dataController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/network-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/network-service.js" afterDir="false" />
     </list>
@@ -137,7 +135,11 @@
       <workItem from="1583863588731" duration="1458000" />
       <workItem from="1583949853934" duration="3669000" />
       <workItem from="1584021597666" duration="1824000" />
-      <workItem from="1584039042360" duration="6649000" />
+      <workItem from="1584039042360" duration="6823000" />
+      <workItem from="1584104507352" duration="3580000" />
+      <workItem from="1584193063878" duration="1340000" />
+      <workItem from="1584210344856" duration="5744000" />
+      <workItem from="1584243596718" duration="15154000" />
     </task>
     <task id="LOCAL-00001" summary="0.1">
       <created>1581879752682</created>
@@ -272,7 +274,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583955801136</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="0.2.1&#10;&#10;Взаимодействие с бэкендом">
+      <created>1584046515180</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1584046515180</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -318,7 +327,8 @@
     <MESSAGE value="0.1.7&#10;&#10;Окно открывается и закрывается" />
     <MESSAGE value="0.1.8&#10;&#10;Даты отображаются корректно." />
     <MESSAGE value="0.2.0&#10;&#10;Взаимодействие с бэкендом" />
-    <option name="LAST_COMMIT_MESSAGE" value="0.2.0&#10;&#10;Взаимодействие с бэкендом" />
+    <MESSAGE value="0.2.1&#10;&#10;Взаимодействие с бэкендом" />
+    <option name="LAST_COMMIT_MESSAGE" value="0.2.1&#10;&#10;Взаимодействие с бэкендом" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="182" key="#ESLint" timestamp="1582463569022">
@@ -333,10 +343,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="271" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1583002226076" />
-    <state x="598" y="119" key="CommitChangelistDialog2" timestamp="1583955800081">
+    <state x="598" y="119" key="CommitChangelistDialog2" timestamp="1584046514203">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="598" y="119" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1583955800081" />
+    <state x="598" y="119" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1584046514203" />
     <state x="92" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1582913691108">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -345,6 +355,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="841" y="419" width="261" height="201" key="Github.ShareDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582053487778" />
+    <state width="1899" height="274" key="GridCell.Tab.0.bottom" timestamp="1584244168416">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="274" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1584244168416" />
+    <state width="1899" height="274" key="GridCell.Tab.0.center" timestamp="1584244168416">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="274" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1584244168416" />
+    <state width="1899" height="274" key="GridCell.Tab.0.left" timestamp="1584244168416">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="274" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1584244168416" />
+    <state width="1899" height="274" key="GridCell.Tab.0.right" timestamp="1584244168416">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="274" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1584244168416" />
     <state x="184" y="92" key="MergeDialog" timestamp="1582213771969">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -357,10 +383,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="681" y="261" width="540" height="524" key="StructurePopup/0.0.1920.1040@0.0.1920.1040" timestamp="1583088758449" />
-    <state x="552" y="257" key="Vcs.Push.Dialog.v2" timestamp="1583955810384">
+    <state x="552" y="257" key="Vcs.Push.Dialog.v2" timestamp="1584046523691">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="257" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1583955810384" />
+    <state x="552" y="257" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1584046523691" />
     <state x="29" y="129" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1583764338951">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -369,10 +395,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="771" y="440" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1582913819122" />
-    <state x="616" y="240" key="run.anything.popup" timestamp="1582138607442">
+    <state x="616" y="240" key="run.anything.popup" timestamp="1584218366881">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1582138607442" />
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1584218366881" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1582488825877">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

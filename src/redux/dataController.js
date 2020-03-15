@@ -11,7 +11,7 @@ class DataController {
             },
             monthEvents: [
                 {
-                    date: new Date(2020, 2, 8),
+                    date: new Date(2020, 3, 8),
                     descriptions: [
                         {
                             date: new Date(),
@@ -44,8 +44,10 @@ class DataController {
 
     hideEventsWindow(events) {
         this.calendarState.window = false;
-        this.calendarState.monthEvents.push(events)
+        // this.calendarState.monthEvents.push(events)
 
+        this.calendarState.monthEvents[events.date.getDate()] = events;
+        debugger
         this.App.onWindowChanged({
             window: this.calendarState.window,
             calendar: this.calendarState.calendar,
@@ -61,13 +63,20 @@ class DataController {
             this.calendarState.calendar.date.getFullYear(),
             this.calendarState.calendar.date.getMonth() + 1,
         );
+            getEventsForMonth(this.calendarState.calendar.date)
+            .then(response => response.json())
+                .then(resp => this.calendarState.monthEvents = resp)
+            .catch(err => console.log(err));
 
 
-        this.App.onCalendarChanged({
-            date: this.calendarState.calendar.date
+        this.App.onMonthEventsChanged({
+            calendar: {
+                date: this.calendarState.calendar.date
+            },
+            monthEvents: this.calendarState.monthEvents
         });
 
-        getEventsForMonth(this.calendarState.calendar.date);
+
     }
 
     monthDecr() {
