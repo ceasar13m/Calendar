@@ -10,20 +10,11 @@ class EventsWindow extends Component {
     constructor(props) {
         super(props);
 
-        this.events = [];
 
-        for (let i = 0; i < this.props.monthEvents.length; i++) {
-            if (this.props.monthEvents[i].date.getMonth() === this.props.date.getMonth() &&
-                this.props.monthEvents[i].date.getDate() === this.props.date.getDate() &&
-                this.props.monthEvents[i].date.getFullYear() === this.props.date.getFullYear()) {
-
-                this.events.push(this.props.monthEvents[i].descriptions);
-            }
-
-        }
+        // this.events.push(this.props.monthEvents[0].descriptions);
 
         this.state = {
-            descriptions: this.events,
+            descriptions: this.props.events,
             text: '',
         };
         this.handleChange = this.handleChange.bind(this);
@@ -77,7 +68,8 @@ class EventsWindow extends Component {
                     <div className={s.nameModal}>
                         <h1>
                             {this.props.date.getDate() + '.'}
-                            {((this.props.date.getMonth() < 10) ? ('0' + (this.props.date.getMonth() + 1)) : (this.props.date.getMonth())) + '.'}
+                            {((this.props.date.getMonth() < 10) ?
+                                ('0' + (this.props.date.getMonth() + 1)) : (this.props.date.getMonth())) + '.'}
                             {this.props.date.getFullYear()}
                         </h1>
                     </div>

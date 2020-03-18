@@ -20,10 +20,8 @@ class MakeList extends React.Component {
 
                 {this.props.events.map(item => (
                     <li key={item.id}>
-
-
                         <div className={s.liList}>
-                            <div className={s.liItem}>{item.description}
+                            <div className={s.liItem}>{item.events}
                                 <hr/>
                             </div>
                             <button className={s.dellButton}>X</button>

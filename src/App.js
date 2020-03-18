@@ -12,7 +12,11 @@ import EventsWindow from "./components/window/eventsWindow/events-window";
             calendar: {
                 date: new Date()
             },
-            monthEvents: [],
+            monthEvents: [
+                {
+
+                }
+            ],
             loadings: true/false
             window: true/false
         }
@@ -22,32 +26,35 @@ class App extends React.Component {
         super(props);
         this.dataController = new DataController(this);
         this.state = this.dataController.getState();
-        this.onCalendarChanged = this.onCalendarChanged.bind(this);
+        this.events = [];
     }
 
 
     onCalendarChanged(calendarNewState) {
+        debugger
         this.setState({
             ...this.state,
-            calendar: calendarNewState.date,
+            calendar: calendarNewState,
         });
     }
 
 
-    onMonthEventsChanged(calendarNewState) {
+    onMonthEventsChanged(monthEventsNewState) {
         this.setState({
             ...this.state,
-            calendar: calendarNewState.calendar,
-            monthEvents: calendarNewState,
+            monthEvents: monthEventsNewState.monthEvents,
         });
-    }
 
-    // onEventsWindowChanged(eventsNewState) {
-    //     this.setState({
-    //         ...this.state,
-    //         events: eventsNewState
-    //     });
-    // }
+        console.log(this.state.monthEvents)
+        // for (let i = 0; i < this.state.monthEvents.length; i++) {
+        //     if (this.state.monthEvents[i].date.getMonth() === this.state.calendar.date.getMonth() &&
+        //         this.state.monthEvents[i].date.getDate() === this.state.calendar.date.getDate() &&
+        //         this.state.monthEvents[i].date.getFullYear() === this.state.calendar.date.getFullYear()) {
+        //         this.events.push(this.props.monthEvents[i].descriptions);
+        //     }
+        //
+        // }
+    }
 
 
     onEventsLoaderChanged(loadingNewState) {
@@ -67,12 +74,12 @@ class App extends React.Component {
     }
 
     render() {
-
+        console.log(this.state.calendar.date)
         return (
             <div id='calendar'>
 
                 <EventsWindow date = {this.state.calendar.date} window={this.state.window} dataController={this.dataController}
-                              monthEvents={this.state.monthEvents}/>
+                              monthEvents={this.state.monthEvents} events = {this.events}/>
 
                 <DateSelect dataController={this.dataController} date={this.state.calendar.date}/>
 

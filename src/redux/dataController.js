@@ -9,16 +9,12 @@ class DataController {
             calendar: {
                 date: new Date()
             },
+
             monthEvents: [
                 {
-                    date: new Date(2020, 3, 8),
-                    descriptions: [
-                        {
-                            date: new Date(),
-                            descriptions: ["Hello", "Bye"]
-                        }
-                    ]
-                },
+                    date: new Date(2020, 11 - 1, 11),
+                    description: "Hello"
+                }
             ],
             loadings: false,
             window: false,
@@ -47,7 +43,6 @@ class DataController {
         // this.calendarState.monthEvents.push(events)
 
         this.calendarState.monthEvents[events.date.getDate()] = events;
-        debugger
         this.App.onWindowChanged({
             window: this.calendarState.window,
             calendar: this.calendarState.calendar,
@@ -63,20 +58,7 @@ class DataController {
             this.calendarState.calendar.date.getFullYear(),
             this.calendarState.calendar.date.getMonth() + 1,
         );
-            getEventsForMonth(this.calendarState.calendar.date)
-            .then(response => response.json())
-                .then(resp => this.calendarState.monthEvents = resp)
-            .catch(err => console.log(err));
-
-
-        this.App.onMonthEventsChanged({
-            calendar: {
-                date: this.calendarState.calendar.date
-            },
-            monthEvents: this.calendarState.monthEvents
-        });
-
-
+        this.getEvents();
     }
 
     monthDecr() {
@@ -84,11 +66,7 @@ class DataController {
             this.calendarState.calendar.date.getFullYear(),
             this.calendarState.calendar.date.getMonth() - 1,
         );
-
-        this.App.onCalendarChanged({
-            date: this.calendarState.calendar.date
-        });
-        getEventsForMonth(this.calendarState.calendar.date);
+        this.getEvents();
     }
 
     yearIncr() {
@@ -96,11 +74,7 @@ class DataController {
             this.calendarState.calendar.date.getFullYear() + 1,
             this.calendarState.calendar.date.getMonth()
         );
-
-        this.App.onCalendarChanged({
-            date: this.calendarState.calendar.date
-        });
-        getEventsForMonth(this.calendarState.calendar.date);
+        this.getEvents();
     }
 
     yearDecr() {
@@ -108,12 +82,39 @@ class DataController {
             this.calendarState.calendar.date.getFullYear() - 1,
             this.calendarState.calendar.date.getMonth()
         );
-
-        this.App.onCalendarChanged({
-            date: this.calendarState.calendar.date
-        });
-        getEventsForMonth(this.calendarState.calendar.date);
+        this.getEvents();
     }
+
+    getEvents() {
+        getEventsForMonth(this.calendarState.calendar.date)
+            .then(response => response.json())
+            .then(resp => {
+                this.calendarState.monthEvents = resp.arrayList;
+                for (let i = 0; i < this.calendarState.monthEvents.length; i++) {
+                    let date = new Date(this.calendarState.monthEvents[i].date)
+                    this.calendarState.monthEvents[i].date = date;
+                    debugger
+                }
+
+                debugger
+                console.log(this.calendarState.monthEvents)
+
+                this.App.onCalendarChanged({
+                    calendar: this.calendarState.calendar
+                });
+
+                this.App.onMonthEventsChanged({
+                    monthEvents: this.calendarState.monthEvents,
+                });
+
+                debugger
+            })
+            .catch(err => console.log(err));
+
+
+    }
+
+
 
 
     getState() {
