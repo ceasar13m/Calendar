@@ -9,23 +9,20 @@ class EventsWindow extends Component {
 
     constructor(props) {
         super(props);
-
-
-        // this.events.push(this.props.monthEvents[0].descriptions);
-
         this.state = {
-            descriptions: this.props.events,
-            text: '',
-        };
+            events: this.props.monthEvents,
+            text: "",
+        }
+        
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
-
-
     }
 
 
     handleChange(e) {
-        this.setState({text: e.target.value});
+        this.setState({
+            ...this.state,
+            text: e.target.value});
     }
 
     handleSubmit(e) {
@@ -33,18 +30,23 @@ class EventsWindow extends Component {
         if (!this.state.text.length) {
             return;
         }
-        const newEvent = {
+        const event = {
+            id: Date.now(),
             date: this.props.date,
             description: this.state.text,
         };
 
+
+        this.props.dataController.addEvent(event);
+
         this.setState(state => ({
-            descriptions: state.descriptions.concat(newEvent),
+            ...this.state,
             text: ''
         }));
     }
 
     render() {
+
         let style = this.props.window ? {display: 'block'} : {display: 'none'};
         return (
             <div style={style}>
@@ -56,20 +58,15 @@ class EventsWindow extends Component {
                         </div>
                         <button className={s.closeButton}
                                 onClick={() => {
-                                    this.props.dataController.hideEventsWindow(
-                                        {
-                                            date: this.props.date,
-                                            descriptions: this.state.descriptions
-                                        }
-                                    )
+                                    this.props.dataController.hideEventsWindow()
                                 }}>X
                         </button>
                     </div>
                     <div className={s.nameModal}>
                         <h1>
                             {this.props.date.getDate() + '.'}
-                            {((this.props.date.getMonth() < 10) ?
-                                ('0' + (this.props.date.getMonth() + 1)) : (this.props.date.getMonth())) + '.'}
+                            {((this.props.date.getMonth() + 1 < 10) ?
+                                ('0' + (this.props.date.getMonth() + 1)) : (this.props.date.getMonth() + 1)) + '.'}
                             {this.props.date.getFullYear()}
                         </h1>
                     </div>
@@ -90,7 +87,7 @@ class EventsWindow extends Component {
                         </form>
 
 
-                        <MakeList events={this.state.descriptions}/>
+                        <MakeList dataController = {this.props.dataController} monthEvents={this.props.monthEvents}/>
                     </div>
                 </div>
 

@@ -73,12 +73,13 @@ h3 {
 }
 .form {
     display: grid;
-    justify-content: center;
+    margin: 0 7.5vw;
+
 }
 input {
     width: 55vw;
-    height: 3vh;
-    font-size: 15px;
+    height: 5vh;
+    font-size: 13px;
     border: 1px solid #cecece;
     background: #F6F6f6;
     border-radius: 8px;
@@ -98,6 +99,7 @@ input {
 
 }
 .addButton button {
+    margin-top: 5px;
     background-color: white;
     transition: background-color 0.5s linear;
     border-radius: 5px;

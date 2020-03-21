@@ -12,11 +12,7 @@ import EventsWindow from "./components/window/eventsWindow/events-window";
             calendar: {
                 date: new Date()
             },
-            monthEvents: [
-                {
-
-                }
-            ],
+            monthEvents: new Map(),
             loadings: true/false
             window: true/false
         }
@@ -26,15 +22,13 @@ class App extends React.Component {
         super(props);
         this.dataController = new DataController(this);
         this.state = this.dataController.getState();
-        this.events = [];
     }
 
 
     onCalendarChanged(calendarNewState) {
-        debugger
         this.setState({
             ...this.state,
-            calendar: calendarNewState,
+            calendar: calendarNewState.calendar,
         });
     }
 
@@ -45,15 +39,7 @@ class App extends React.Component {
             monthEvents: monthEventsNewState.monthEvents,
         });
 
-        console.log(this.state.monthEvents)
-        // for (let i = 0; i < this.state.monthEvents.length; i++) {
-        //     if (this.state.monthEvents[i].date.getMonth() === this.state.calendar.date.getMonth() &&
-        //         this.state.monthEvents[i].date.getDate() === this.state.calendar.date.getDate() &&
-        //         this.state.monthEvents[i].date.getFullYear() === this.state.calendar.date.getFullYear()) {
-        //         this.events.push(this.props.monthEvents[i].descriptions);
-        //     }
-        //
-        // }
+
     }
 
 
@@ -69,17 +55,16 @@ class App extends React.Component {
         this.setState({
             ...this.state,
             window: windowNewState.window,
-            calendar: windowNewState.calendar,
         });
     }
 
     render() {
-        console.log(this.state.calendar.date)
+
         return (
             <div id='calendar'>
 
                 <EventsWindow date = {this.state.calendar.date} window={this.state.window} dataController={this.dataController}
-                              monthEvents={this.state.monthEvents} events = {this.events}/>
+                              monthEvents={this.state.monthEvents}/>
 
                 <DateSelect dataController={this.dataController} date={this.state.calendar.date}/>
 

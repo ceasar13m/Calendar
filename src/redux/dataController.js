@@ -1,4 +1,4 @@
-import {addEvent, getEventsForMonth} from "../services/network-service";
+import {addEvent, deleteEvent, getEventsForMonth} from "../services/network-service";
 
 class DataController {
 
@@ -10,12 +10,7 @@ class DataController {
                 date: new Date()
             },
 
-            monthEvents: [
-                {
-                    date: new Date(2020, 11 - 1, 11),
-                    description: "Hello"
-                }
-            ],
+            monthEvents: new Map(),
             loadings: false,
             window: false,
         }
@@ -23,33 +18,60 @@ class DataController {
     }
 
 
-    showEventsWindow(date) {
-        this.calendarState.window = true;
-        this.calendarState.calendar.date = date;
+    /**
+     *
+     * @param event
+     * @returns {Promise<void>}
+     */
+    async addEvent(event) {
+        await addEvent(event);
+        this.calendarState.monthEvents.set(event.id, event);
+        this.App.onMonthEventsChanged({
+            monthEvents: this.calendarState.monthEvents
+        });
+    }
 
+
+    /**
+     *
+     * @param id
+     * @returns {Promise<void>}
+     */
+    async deleteEvent(event) {
+        await deleteEvent(event);
+        this.calendarState.monthEvents.delete(event.id);
+        this.App.onMonthEventsChanged({
+            monthEvents: this.calendarState.monthEvents
+        });
+    }
+
+
+    async showEventsWindow(date) {
+        this.calendarState.calendar.date = date;
+        this.App.onCalendarChanged({
+            calendar: this.calendarState.calendar
+        });
+
+        await this.getEvents();
+        this.App.onMonthEventsChanged({
+            monthEvents: this.calendarState.monthEvents,
+        });
+
+        this.calendarState.window = true;
         this.App.onWindowChanged({
             window: this.calendarState.window,
-            calendar: {
-                date: date
-            },
         });
 
 
     }
 
 
-    hideEventsWindow(events) {
+    hideEventsWindow() {
         this.calendarState.window = false;
-        // this.calendarState.monthEvents.push(events)
-
-        this.calendarState.monthEvents[events.date.getDate()] = events;
         this.App.onWindowChanged({
             window: this.calendarState.window,
-            calendar: this.calendarState.calendar,
-            monthEvents: this.calendarState.monthEvents
         });
 
-        addEvent(events);
     }
 
 
@@ -58,7 +80,10 @@ class DataController {
             this.calendarState.calendar.date.getFullYear(),
             this.calendarState.calendar.date.getMonth() + 1,
         );
-        this.getEvents();
+
+        this.App.onCalendarChanged({
+            calendar: this.calendarState.calendar
+        });
     }
 
     monthDecr() {
@@ -66,7 +91,10 @@ class DataController {
             this.calendarState.calendar.date.getFullYear(),
             this.calendarState.calendar.date.getMonth() - 1,
         );
-        this.getEvents();
+
+        this.App.onCalendarChanged({
+            calendar: this.calendarState.calendar
+        });
     }
 
     yearIncr() {
@@ -74,7 +102,11 @@ class DataController {
             this.calendarState.calendar.date.getFullYear() + 1,
             this.calendarState.calendar.date.getMonth()
         );
-        this.getEvents();
+
+
+        this.App.onCalendarChanged({
+            calendar: this.calendarState.calendar
+        });
     }
 
     yearDecr() {
@@ -82,35 +114,25 @@ class DataController {
             this.calendarState.calendar.date.getFullYear() - 1,
             this.calendarState.calendar.date.getMonth()
         );
-        this.getEvents();
+
+        this.App.onCalendarChanged({
+            calendar: this.calendarState.calendar
+        });
+
     }
 
-    getEvents() {
-        getEventsForMonth(this.calendarState.calendar.date)
+    async getEvents() {
+        this.calendarState.monthEvents = new Map();
+        return await getEventsForMonth(this.calendarState.calendar.date)
             .then(response => response.json())
             .then(resp => {
-                this.calendarState.monthEvents = resp.arrayList;
-                for (let i = 0; i < this.calendarState.monthEvents.length; i++) {
-                    let date = new Date(this.calendarState.monthEvents[i].date)
-                    this.calendarState.monthEvents[i].date = date;
-                    debugger
+                for (let event of resp.arrayList) {
+                    event.date = new Date(event.date);
+                    this.calendarState.monthEvents.set(event.id, event);
                 }
 
-                debugger
-                console.log(this.calendarState.monthEvents)
-
-                this.App.onCalendarChanged({
-                    calendar: this.calendarState.calendar
-                });
-
-                this.App.onMonthEventsChanged({
-                    monthEvents: this.calendarState.monthEvents,
-                });
-
-                debugger
             })
             .catch(err => console.log(err));
-
 
     }
 

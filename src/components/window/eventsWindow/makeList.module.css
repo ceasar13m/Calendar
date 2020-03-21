@@ -1,32 +1,28 @@
 ul {
-    display: grid;
-    justify-content: center;
-/*margin: 0 auto;*/
-    overflow: inherit;
+    /*overflow: inherit;*/
     height: 38vh;
     width: 65vw;
-    overflow: scroll;
+    overflow: auto;
+    margin-left: 5vw;
 
 
-    word-wrap: break-word;
+    word-break: break-all;
 
 }
 .liList{
     display: flex;
-    /*justify-content: space-between;*/
 
     width: 100vw;
-    max-width: 60vw;
+    max-width: 58vw;
 
 
-    margin: 5px;
 
 
 }
 .dellButton {
     height: 2vh;
     width: 2vw;
-    border-radius: 20px;
+    border-radius: 50%;
     transition: background-color 0.3s linear;
     font-size: 10px;
     line-height: 2vh;
@@ -46,5 +42,5 @@ ul {
 }
 
 .liItem hr {
-    width: 110vh;
+    width: 55vw;
 }

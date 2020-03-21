@@ -7,7 +7,6 @@ import YearSelect from "./YearSelect/YearSelect";
 class DateSelect extends Component{
 
     render() {
-        debugger
         return (
             <div className={s.month}>
                 <MonthSelect dataController={this.props.dataController} date={this.props.date}/>
