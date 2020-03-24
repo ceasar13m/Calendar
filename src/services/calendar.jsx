@@ -10,7 +10,7 @@ import DaysOfTheWeek from "../components/daysOfWeek/daysOfTheWeek";
 
 class Calendar extends Component {
 
-    createCalendar = (d) => {
+    createCalendar(d) {
         let date = new Date(d.getFullYear(), d.getMonth());
         let mon = date.getMonth();
         const weeks = []; //Весь месяц
@@ -28,12 +28,13 @@ class Calendar extends Component {
             if (previousMonthDate.getDay() === 0)
                 break;
 
-
             if (week.length === 5 || week.length === 6) {
-                week.push(<Cell date={date} dataController={this.props.dataController} notButtonIsWeekend={true} value={i}/>);
+                week.push(<Cell date={date} dataController={this.props.dataController} notButtonIsWeekend={true}
+                                value={i}/>);
             } else
                 week.push(<Cell date={date} notButtonSquare={true} value={i}/>);
         }
+
 
 
         //Создает недели и добавляем в массив месяца
@@ -41,23 +42,36 @@ class Calendar extends Component {
 
             let tempDate = new Date(date.getFullYear(), date.getMonth(), date.getDate());
             let today = new Date();
+            let eventCount = 0;
+
+            for (let count of this.props.counts) {
+
+                if (count.date.getDate() === date.getDate() &&
+                    count.date.getMonth() === date.getMonth() &&
+                    count.date.getFullYear() === date.getFullYear()) {
+                    eventCount = count.count;
+                }
+            }
 
 
             if (date.getDate() === today.getDate() &&
                 date.getMonth() === today.getMonth() &&
                 date.getFullYear() === today.getFullYear()) {
-                week.push(<Cell dataController={this.props.dataController}
+                week.push(<Cell eventCount={eventCount}
+                                dataController={this.props.dataController}
                                 date={tempDate}
                                 isToday={true}
                                 value={date.getDate()}/>);
 
             } else if (date.getDay() === 6 || date.getDay() === 0) {
-                week.push(<Cell dataController={this.props.dataController}
+                week.push(<Cell eventCount={eventCount}
+                                dataController={this.props.dataController}
                                 date={tempDate}
                                 isWeekend={true}
                                 value={date.getDate()}/>);
             } else {
-                week.push(<Cell dataController={this.props.dataController}
+                week.push(<Cell eventCount={eventCount}
+                                dataController={this.props.dataController}
                                 date={tempDate}
                                 value={date.getDate()}/>);
             }
@@ -76,9 +90,9 @@ class Calendar extends Component {
         if (this.getDay(date) !== 0) {
             for (let i = this.getDay(nextMonthDate); i < 7; i++) {
                 if (i === 5 || i === 6) {
-                    week.push(<Cell  notButtonIsWeekend={true} value={nextMonthDate.getDate()}/>);
+                    week.push(<Cell notButtonIsWeekend={true} value={nextMonthDate.getDate()}/>);
                 } else {
-                    week.push(<Cell  notButtonSquare={true} value={nextMonthDate.getDate()}/>);
+                    week.push(<Cell notButtonSquare={true} value={nextMonthDate.getDate()}/>);
                 }
                 nextMonthDate.setDate(nextMonthDate.getDate() + 1);
             }

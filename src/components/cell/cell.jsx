@@ -3,14 +3,23 @@ import s from "./cell.module.css";
 
 class Cell extends React.Component {
 
+
+
     render() {
+
+        let style = (this.props.eventCount !== 0) ? {display: 'block'} : {display: 'none'};
         if (this.props.isToday) {
             return (
                 <button className={s.today}
                         onClick={() => {
                             this.props.dataController.showEventsWindow(this.props.date);
                         }}>
-                    {this.props.date.getDate()}
+                    <div>
+                        {this.props.date.getDate()}
+                    </div>
+                    <div className={s.Count} style={style}>
+                        {this.props.eventCount}
+                    </div>
                 </button>
             );
         }  else if (this.props.isWeekend) {
@@ -19,7 +28,12 @@ class Cell extends React.Component {
                         onClick={() => {
                             this.props.dataController.showEventsWindow(this.props.date);
                         }}>
-                    {this.props.date.getDate()}
+                    <div>
+                        {this.props.date.getDate()}
+                    </div>
+                    <div className={s.Count} style={style}>
+                        {this.props.eventCount}
+                    </div>
                 </button>
             );
         } else if (this.props.notButtonIsWeekend) {
@@ -40,7 +54,12 @@ class Cell extends React.Component {
                         onClick={() => {
                             this.props.dataController.showEventsWindow(this.props.date);
                         }}>
-                    {this.props.date.getDate()}
+                    <div>
+                        {this.props.date.getDate()}
+                    </div>
+                    <div className={s.Count} style={style}>
+                        {this.props.eventCount}
+                    </div>
                 </button>
             );
         }

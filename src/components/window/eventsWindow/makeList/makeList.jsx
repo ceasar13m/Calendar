@@ -6,7 +6,7 @@ class MakeList extends React.Component {
 
     render() {
         let events = [];
-        for (let [key, value] of this.props.monthEvents) {
+        for (let [key, value] of this.props.events) {
             events.push(value);
         }
 

@@ -23,11 +23,11 @@ class MonthSelect extends Component {
         ];
 
         let monthClickDown = () => {
-            this.props.dataController.monthDecr();
+            this.props.dataController.monthIncr();
         };
 
         let monthClickUp = () => {
-            this.props.dataController.monthIncr();
+            this.props.dataController.monthDecr();
         };
 
 
@@ -35,7 +35,7 @@ class MonthSelect extends Component {
             <div className={s.monthName}>
 
                 <div className={s.up} onClick={monthClickUp}>
-                    <div className={s.upButtonText}>next</div>
+                    <div className={s.upButtonText}>previous</div>
                 </div>
 
 
@@ -45,7 +45,7 @@ class MonthSelect extends Component {
 
 
                 <div className={s.down} onClick={monthClickDown}>
-                    <div className={s.downButtonText}>previous</div>
+                    <div className={s.downButtonText}>next</div>
                 </div>
 
             </div>

@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import s from "../../window/eventsWindow/events-winow.module.css";
-import MakeList from "../../window/eventsWindow/makeList";
+import MakeList from "../../window/eventsWindow/makeList/makeList";
 
 
 class Events extends Component {

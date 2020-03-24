@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import s from "./events-winow.module.css"
 import BackGroundLayer from "../bgLayer/bg-layer";
-import MakeList from "./makeList";
+import MakeList from "./makeList/makeList";
 
 
 class EventsWindow extends Component {
@@ -51,6 +51,7 @@ class EventsWindow extends Component {
         return (
             <div style={style}>
                 <BackGroundLayer dataController={this.props.dataController}/>
+
                 <div className={s.FormContainer}>
                     <div className={s.row}>
                         <div className={s.title}>
@@ -87,7 +88,7 @@ class EventsWindow extends Component {
                         </form>
 
 
-                        <MakeList dataController = {this.props.dataController} monthEvents={this.props.monthEvents}/>
+                        <MakeList dataController = {this.props.dataController} events={this.props.events}/>
                     </div>
                 </div>
 

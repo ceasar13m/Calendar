@@ -7,18 +7,18 @@ class YearSelect extends Component {
     render() {
 
         let yearClickDown = () => {
-            this.props.dataController.yearDecr();
+            this.props.dataController.yearIncr();
         };
 
         let yearClickUp = () => {
-            this.props.dataController.yearIncr();
+            this.props.dataController.yearDecr();
         };
 
 
         return (
             <div className={s.year}>
                 <div className={s.up} onClick={yearClickUp}>
-                    next
+                    previous
                 </div>
 
                 <div>
@@ -26,7 +26,7 @@ class YearSelect extends Component {
                 </div>
 
                 <div className={s.down} onClick={yearClickDown}>
-                    previous
+                    next
                 </div>
 
             </div>

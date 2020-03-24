@@ -1,16 +1,26 @@
-export  function getEventsForMonth(date) {
+export  function getEvent(date) {
     let requestBody = {
         date: date
     };
 
-
-   return  fetch('http://localhost:8080/get-month-events', {
+   return  fetch('http://localhost:8080/get-events', {
         method: 'POST',
         body: JSON.stringify(requestBody)
     })
 
 }
 
+export  function getEventsCounts(date) {
+    let requestBody = {
+        date: date
+    };
+
+    return  fetch('http://localhost:8080/get-events-counts', {
+        method: 'POST',
+        body: JSON.stringify(requestBody)
+    })
+
+}
 
 export async function addEvent(event) {
 

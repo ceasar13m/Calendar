@@ -5,6 +5,7 @@ import s from "./bg-layer.module.css"
 class BackGroundLayer extends Component {
 
     render() {
+
         return (
             <div
                 id={'bgLayerId'}

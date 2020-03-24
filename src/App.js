@@ -6,13 +6,14 @@ import DataController from "./redux/dataController";
 import LeftButton from "./components/navigationButtons/leftButton/leftButton";
 import RightButton from "./components/navigationButtons/rightButton/rightButton";
 import EventsWindow from "./components/window/eventsWindow/events-window";
+import LoadLayer from "./components/window/loadLayer/load-layer";
 
 /**
  * this.state = {
             calendar: {
                 date: new Date()
             },
-            monthEvents: new Map(),
+            events: new Map(),
             loadings: true/false
             window: true/false
         }
@@ -33,10 +34,10 @@ class App extends React.Component {
     }
 
 
-    onMonthEventsChanged(monthEventsNewState) {
+    onEventsChanged(monthEventsNewState) {
         this.setState({
             ...this.state,
-            monthEvents: monthEventsNewState.monthEvents,
+            events: monthEventsNewState.events,
         });
 
 
@@ -46,7 +47,7 @@ class App extends React.Component {
     onEventsLoaderChanged(loadingNewState) {
         this.setState({
             ...this.state,
-            loading: loadingNewState
+            loadings: loadingNewState.loadings
         });
     }
 
@@ -58,13 +59,22 @@ class App extends React.Component {
         });
     }
 
+
+    onCountsChanged(countsNewState) {
+        this.setState({
+            ...this.state,
+            counts: countsNewState.counts
+        });
+    }
+
     render() {
 
         return (
             <div id='calendar'>
+                <LoadLayer loadings = {this.state.loadings}/>
 
                 <EventsWindow date = {this.state.calendar.date} window={this.state.window} dataController={this.dataController}
-                              monthEvents={this.state.monthEvents}/>
+                              events={this.state.events}/>
 
                 <DateSelect dataController={this.dataController} date={this.state.calendar.date}/>
 
@@ -74,7 +84,7 @@ class App extends React.Component {
                     <LeftButton dataController={this.dataController}/>
 
                     <div className={s.calendarTable}>
-                        <Calendar dataController={this.dataController} date={this.state.calendar.date}/>
+                        <Calendar counts = {this.state.counts} dataController={this.dataController} date={this.state.calendar.date}/>
                     </div>
 
                     <RightButton dataController={this.dataController}/>

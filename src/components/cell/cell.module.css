@@ -1,4 +1,5 @@
 .square {
+    position: relative;
     background: #fff;
     border: 1px solid #999;
     float: left;
@@ -16,6 +17,7 @@
 
 
 .today {
+    position: relative;
     background: #999999;
     border: 1px solid #999;
     float: left;
@@ -30,7 +32,22 @@
     width: 10vw;
 }
 
+.Count {
+    width: 30px;
+    height: 30px;
+
+    margin: 5px;
+    position: absolute;
+    font-size: 17px;
+    top: 0;
+    right: 0;
+    background-color: rgba(125, 125, 125, 0);
+    color: #d8d8d8;
+    border-radius: 5px;
+}
+
 .weekend {
+    position: relative;
     background: white;
     color: red;
     border: 1px solid #999;
