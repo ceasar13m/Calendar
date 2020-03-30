@@ -71,12 +71,15 @@ class App extends React.Component {
 
         return (
             <div id='calendar'>
-                <LoadLayer loadings = {this.state.loadings}/>
+                <LoadLayer loadings={this.state.loadings}/>
 
-                <EventsWindow date = {this.state.calendar.date} window={this.state.window} dataController={this.dataController}
+                <EventsWindow date={this.state.calendar.date}
+                              window={this.state.window}
+                              dataController={this.dataController}
                               events={this.state.events}/>
 
-                <DateSelect dataController={this.dataController} date={this.state.calendar.date}/>
+                <DateSelect dataController={this.dataController}
+                            date={this.state.calendar.date}/>
 
                 <div className={s.calendar}>
 
@@ -84,7 +87,11 @@ class App extends React.Component {
                     <LeftButton dataController={this.dataController}/>
 
                     <div className={s.calendarTable}>
-                        <Calendar counts = {this.state.counts} dataController={this.dataController} date={this.state.calendar.date}/>
+                        <div className={s.block}>
+                            <Calendar counts={this.state.counts}
+                                      dataController={this.dataController}
+                                      date={this.state.calendar.date}/>
+                        </div>
                     </div>
 
                     <RightButton dataController={this.dataController}/>
@@ -92,6 +99,12 @@ class App extends React.Component {
 
                 </div>
 
+                <footer>
+
+                    <div>Developed by <a href="https://github.com/ceasar13m">ceasar13m</a></div>
+                    <div> Design by <a href="https://github.com/Jorlian4ik">Jorlian4ik</a></div>
+                    <div>2019 - {(new Date()).getFullYear()}</div>
+                </footer>
             </div>
         )
 

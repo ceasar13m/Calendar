@@ -15,7 +15,7 @@ h1 {
 
 .monthNameTitle {
     padding-right: 10px;
-    font-size: 45px;
+    font-size: 2.5vw;
 }
 
 
@@ -34,6 +34,7 @@ h1 {
     width: 10vw;
     height: 5vh;
     text-align: center;
+    font-size: 1.0vw;
 
     transition: background-color 0.3s linear;
     border-radius: 5px;
@@ -54,6 +55,7 @@ h1 {
     transition: background-color 0.3s linear;
     border-radius: 5px;
     line-height: 5vh;
+    font-size: 1.0vw;
 
 }
 

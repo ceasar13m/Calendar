@@ -1,17 +1,21 @@
+.day {
+    line-height: 9vh;
+}
+
+
 .square {
     position: relative;
     background: #fff;
     border: 1px solid #999;
     float: left;
-    font-size: 30px;
+    font-size: 2.0vw;
     font-weight: bold;
-    line-height: 34px;
-    height: 10vh;
+    height: 9vh;
     margin-right: -1px;
     margin-top: -1px;
     padding: 0;
     text-align: center;
-    width: 10vw;
+    width: 9vw;
 }
 
 
@@ -21,26 +25,24 @@
     background: #999999;
     border: 1px solid #999;
     float: left;
-    font-size: 30px;
+    font-size: 2.0vw;
     font-weight: bold;
-    line-height: 34px;
-    height: 10vh;
+    height: 9vh;
     margin-right: -1px;
     margin-top: -1px;
     padding: 0;
     text-align: center;
-    width: 10vw;
+    width: 9vw;
 }
 
 .Count {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 1.0vw;
     width: 30px;
     height: 30px;
 
-    margin: 5px;
-    position: absolute;
-    font-size: 17px;
-    top: 0;
-    right: 0;
     background-color: rgba(125, 125, 125, 0);
     color: #d8d8d8;
     border-radius: 5px;
@@ -52,15 +54,14 @@
     color: red;
     border: 1px solid #999;
     float: left;
-    font-size: 30px;
+    font-size: 2.0vw;
     font-weight: bold;
-    line-height: 34px;
-    height: 10vh;
+    height: 9vh;
     margin-right: -1px;
     margin-top: -1px;
     padding: 0;
     text-align: center;
-    width: 10vw;
+    width: 9vw;
 }
 
 
@@ -69,49 +70,46 @@
     color: red;
     border: 1px solid #999;
     float: left;
-    font-size: 30px;
+    font-size: 2.0vw;
     font-weight: bold;
-    line-height: 34px;
-    height: 10vh;
+    line-height: 9vh;
+    height: 9vh;
     margin-right: -1px;
     margin-top: -1px;
     padding: 0;
     text-align: center;
-    width: 10vw;
-    outline: none;
+    width: 9vw;
 }
 
 .notButtonSquare {
     background: #fff;
     border: 1px solid #999;
     float: left;
-    font-size: 30px;
+    font-size: 2.0vw;
     font-weight: bold;
-    line-height: 34px;
-    height: 10vh;
+    line-height: 9vh;
+    height: 9vh;
     margin-right: -1px;
     margin-top: -1px;
     padding: 0;
     text-align: center;
-    width: 10vw;
+    width: 9vw;
     color: #999999;
-    outline: none;
 }
 
 .dateName {
     background: #fff;
     border: 1px solid #999;
     float: left;
-    font-size: 40px;
+    font-size: 3.0vw;
     font-weight: bold;
-    line-height: 34px;
-    height: 10vh;
+    line-height: 9vh;
+    height: 9vh;
     margin-right: -1px;
     margin-top: -1px;
     padding: 0;
     text-align: center;
-    width: 10vw;
-    outline: none;
+    width: 9vw;
 }
 
 
@@ -120,14 +118,13 @@
     color: red;
     border: 1px solid #999;
     float: left;
-    font-size: 30px;
+    font-size: 2.0vw;
     font-weight: bold;
-    line-height: 34px;
-    height: 10vh;
+    line-height: 9vh;
+    height: 9vh;
     margin-right: -1px;
     margin-top: -1px;
     padding: 0;
     text-align: center;
-    width: 10vw;
-    outline: none;
+    width: 9vw;
 }

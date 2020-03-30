@@ -10,57 +10,57 @@ class Cell extends React.Component {
         let style = (this.props.eventCount !== 0) ? {display: 'block'} : {display: 'none'};
         if (this.props.isToday) {
             return (
-                <button className={s.today}
+                <div className={s.today}
                         onClick={() => {
                             this.props.dataController.showEventsWindow(this.props.date);
                         }}>
-                    <div>
+                    <div className={s.day}>
                         {this.props.date.getDate()}
                     </div>
                     <div className={s.Count} style={style}>
                         {this.props.eventCount}
                     </div>
-                </button>
+                </div>
             );
         }  else if (this.props.isWeekend) {
             return (
-                <button className={s.weekend}
+                <div className={s.weekend}
                         onClick={() => {
                             this.props.dataController.showEventsWindow(this.props.date);
                         }}>
-                    <div>
+                    <div className={s.day}>
                         {this.props.date.getDate()}
                     </div>
                     <div className={s.Count} style={style}>
                         {this.props.eventCount}
                     </div>
-                </button>
+                </div>
             );
         } else if (this.props.notButtonIsWeekend) {
             return (
-                <button className={s.preWeekend}>
+                <div className={s.preWeekend}>
                     {this.props.value}
-                </button>
+                </div>
             );
         } else if (this.props.notButtonSquare) {
             return (
-                <button className={s.notButtonSquare}>
+                <div className={s.notButtonSquare}>
                     {this.props.value}
-                </button>
+                </div>
             );
         } else {
             return (
-                <button className={s.square}
+                <div className={s.square}
                         onClick={() => {
                             this.props.dataController.showEventsWindow(this.props.date);
                         }}>
-                    <div>
+                    <div className={s.day}>
                         {this.props.date.getDate()}
                     </div>
                     <div className={s.Count} style={style}>
                         {this.props.eventCount}
                     </div>
-                </button>
+                </div>
             );
         }
     }

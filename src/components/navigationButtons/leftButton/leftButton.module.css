@@ -1,6 +1,6 @@
-p {
+.leftButton p {
     margin: 0;
-    font-size: 15rem;
+    font-size: 13vw;
     font-family: 'Myriad Pro';
     font-stretch: ultra-condensed;
 
@@ -12,17 +12,14 @@ p {
 }
 .leftButton {
     width: 15vw;
-    height: 80vh;
+    height: 65vh;
     transition: background-color, opacity 0.3s linear;
     line-height: 80vh;
-    font-size: 30px;
     text-align: center;
     opacity: 0.3;
 }
 
 .leftButton:hover {
-    width: 15vw;
-    height: 80vh;
     opacity: 1;
     cursor: pointer;
 }

@@ -10,7 +10,6 @@ class EventsWindow extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            events: this.props.monthEvents,
             text: "",
         }
         

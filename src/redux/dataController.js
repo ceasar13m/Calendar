@@ -49,11 +49,22 @@ class DataController {
      * @returns {Promise<void>}
      */
     async deleteEvent(event) {
+        this.calendarState.loadings = true;
+        this.App.onEventsLoaderChanged({
+            loadings: this.calendarState.loadings,
+        });
         await deleteEvent(event);
+
+        this.calendarState.loadings = false;
+        this.App.onEventsLoaderChanged({
+            loadings: this.calendarState.loadings,
+        });
+
         this.calendarState.events.delete(event.id);
         this.App.onEventsChanged({
             events: this.calendarState.events
         });
+
     }
 
 
@@ -91,6 +102,7 @@ class DataController {
 
 
     async hideEventsWindow() {
+        this.calendarState.counts = [];
         await this.getCounts(this.calendarState.calendar.date);
 
         this.App.onCountsChanged({
