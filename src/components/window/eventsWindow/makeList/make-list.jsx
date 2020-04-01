@@ -1,6 +1,9 @@
 import React from "react";
-import s from "./index.module.css";
+import s from "./make-list.module.css";
 
+/**
+ * Вывод событий
+ */
 class MakeList extends React.Component {
 
     render() {

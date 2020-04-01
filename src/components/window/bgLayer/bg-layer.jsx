@@ -1,7 +1,10 @@
 import React, {Component} from "react";
-import s from "./index.module.css"
+import s from "./bg-layer.module.css"
 
 
+/**
+ * Темный фон при открытии окна
+ */
 class BackGroundLayer extends Component {
 
     render() {

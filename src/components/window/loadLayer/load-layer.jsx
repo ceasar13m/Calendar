@@ -1,8 +1,10 @@
 import React, {Component} from "react";
-import "./index.css"
-import BackGroundLoadingLayer from "./bgLayer";
+import "./load-layer.css"
+import BackGroundLoadingLayer from "./bgLayer/bg-layer";
 
-
+/**
+ * Анимация загрузки
+ */
 class LoadLayer extends Component {
 
     render() {

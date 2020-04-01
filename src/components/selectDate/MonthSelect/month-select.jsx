@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import s from "./index.module.css"
+import s from "./month-select.module.css"
 
 /**
  * Текущий месяц и кнопки изменения месяца

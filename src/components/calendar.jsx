@@ -1,6 +1,6 @@
 import React, {Component} from "react";
-import Cell from "./cell";
-import DaysOfTheWeek from "./daysOfWeek/daysOfTheWeek";
+import Cell from "./cell/cell";
+import DaysOfTheWeek from "./daysOfWeek/days-of-the-week";
 
 
 /**

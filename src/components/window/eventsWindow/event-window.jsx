@@ -1,9 +1,11 @@
 import React, {Component} from "react";
-import s from "./index.module.css"
-import MakeList from "./makeList";
-import BackGroundLayer from "../bgLayer";
+import s from "./event-window.module.css"
+import MakeList from "./makeList/make-list";
+import BackGroundLayer from "../bgLayer/bg-layer";
 
-
+/**
+ * Окно событий
+ */
 class EventsWindow extends Component {
     constructor(props) {
         super(props);

@@ -1,6 +1,6 @@
 import React from "react";
-import s from "./daysOfWeek.module.css"
-import DaysNameCell from "./daysNameCell";
+import s from "./days-of-week.module.css"
+import DaysNameCell from "./days-name-sell";
 
 
 /**

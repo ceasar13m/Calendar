@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import s from "../cell/index.module.css";
+import s from "../cell/cell.module.css";
 
 
 /**
