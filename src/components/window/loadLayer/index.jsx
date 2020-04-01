@@ -1,6 +1,6 @@
 import React, {Component} from "react";
-import "./load-layer.css"
-import BackGroundLoadingLayer from "./bgLayer/bgl-layer";
+import "./index.css"
+import BackGroundLoadingLayer from "./bgLayer";
 
 
 class LoadLayer extends Component {
@@ -17,8 +17,6 @@ class LoadLayer extends Component {
             </div>
         );
     }
-
 }
-
 
 export default LoadLayer;

@@ -1,11 +1,10 @@
 import React, {Component} from "react";
-import s from "./bg-layer.module.css"
+import s from "./index.module.css"
 
 
 class BackGroundLayer extends Component {
 
     render() {
-
         return (
             <div
                 id={'bgLayerId'}

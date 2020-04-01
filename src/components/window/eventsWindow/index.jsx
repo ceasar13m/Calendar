@@ -1,12 +1,10 @@
 import React, {Component} from "react";
-import s from "./events-winow.module.css"
-import BackGroundLayer from "../bgLayer/bg-layer";
-import MakeList from "./makeList/makeList";
+import s from "./index.module.css"
+import MakeList from "./makeList";
+import BackGroundLayer from "../bgLayer";
 
 
 class EventsWindow extends Component {
-
-
     constructor(props) {
         super(props);
         this.state = {
@@ -16,7 +14,6 @@ class EventsWindow extends Component {
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
-
 
     handleChange(e) {
         this.setState({
@@ -35,7 +32,6 @@ class EventsWindow extends Component {
             description: this.state.text,
         };
 
-
         this.props.dataController.addEvent(event);
 
         this.setState(state => ({
@@ -46,9 +42,9 @@ class EventsWindow extends Component {
 
     render() {
 
-        let style = this.props.window ? {display: 'block'} : {display: 'none'};
+        let windowVisibleStile = this.props.window ? {display: 'block'} : {display: 'none'};
         return (
-            <div style={style}>
+            <div style={windowVisibleStile}>
                 <BackGroundLayer dataController={this.props.dataController}/>
 
                 <div className={s.FormContainer}>
@@ -85,16 +81,12 @@ class EventsWindow extends Component {
                                 </button>
                             </div>
                         </form>
-
-
                         <MakeList dataController = {this.props.dataController} events={this.props.events}/>
                     </div>
                 </div>
-
             </div>
         );
     }
-
 }
 
 

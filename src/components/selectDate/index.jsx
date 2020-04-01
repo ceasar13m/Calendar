@@ -1,9 +1,11 @@
 import React, {Component} from "react";
-import s from "./DateSelect.module.css"
-import MonthSelect from "./MonthSelect/MonthSelect";
-import YearSelect from "./YearSelect/YearSelect";
+import s from "./Index.module.css"
+import MonthSelect from "./MonthSelect";
+import YearSelect from "./YearSelect";
 
-
+/**
+ * Изменение даты
+ */
 class DateSelect extends Component{
 
     render() {

@@ -1,9 +1,12 @@
+const Url = "http://ec2-3-87-201-249.compute-1.amazonaws.com";
+const Port = "8080";
+
 export  function getEvent(date) {
     let requestBody = {
         date: date.getTime()
     };
 
-   return  fetch('http://ec2-3-87-201-249.compute-1.amazonaws.com:8080/get-events', {
+   return  fetch(`${Url}:${Port}/get-events`, {
         method: 'POST',
         body: JSON.stringify(requestBody)
     })
@@ -15,7 +18,7 @@ export  function getEventsCounts(date) {
         date: date.getTime()
     };
 
-    return  fetch('http://ec2-3-87-201-249.compute-1.amazonaws.com:8080/get-events-counts', {
+    return  fetch(`${Url}:${Port}/get-events-counts`, {
         method: 'POST',
         body: JSON.stringify(requestBody)
     })
@@ -24,7 +27,7 @@ export  function getEventsCounts(date) {
 
 export async function addEvent(event) {
     event.date = event.date.getTime();
-    let response = fetch('http://ec2-3-87-201-249.compute-1.amazonaws.com:8080/add-event', {
+    let response = fetch(`${Url}:${Port}/add-event`, {
         method: 'POST',
         body: JSON.stringify(event)
     });
@@ -33,7 +36,7 @@ export async function addEvent(event) {
 
 export async function deleteEvent(event) {
     event.date = event.date.getTime();
-    let response = fetch('http://ec2-3-87-201-249.compute-1.amazonaws.com:8080/delete-event', {
+    let response = fetch(`${Url}:${Port}/delete-event`, {
         method: 'POST',
         body: JSON.stringify(event)
     });

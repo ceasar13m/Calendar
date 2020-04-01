@@ -4,21 +4,16 @@ ul {
     width: 65vw;
     overflow: auto;
     margin-left: 5vw;
-
-
     word-break: break-all;
 
 }
+
 .liList{
     display: flex;
-
     width: 100vw;
     max-width: 58vw;
-
-
-
-
 }
+
 .dellButton {
     height: 2vh;
     width: 2vw;
@@ -26,7 +21,6 @@ ul {
     transition: background-color 0.3s linear;
     font-size: 10px;
     line-height: 2vh;
-
     margin: 5px;
     outline: none;
 }

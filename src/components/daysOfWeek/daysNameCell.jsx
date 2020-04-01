@@ -1,6 +1,10 @@
 import React, {Component} from "react";
-import s from "./cell.module.css";
+import s from "../cell/index.module.css";
 
+
+/**
+ * Ячейка календаря с названием дня недели
+ */
 class DaysNameCell extends Component {
     render() {
             return (
@@ -10,6 +14,5 @@ class DaysNameCell extends Component {
             );
     }
 }
-
 
 export default DaysNameCell;

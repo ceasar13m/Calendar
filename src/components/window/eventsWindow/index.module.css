@@ -1,6 +1,7 @@
 h2 {
     margin: 0;
 }
+
 h3 {
     margin: 0;
     margin-top: 5px;
@@ -15,18 +16,11 @@ h3 {
     z-index: 16;
     background-color: white;
     border-radius: 5px;
-
     -webkit-box-shadow: 16px 13px 15px -4px rgba(0,0,0,0.75);
     -moz-box-shadow: 16px 13px 15px -4px rgba(0,0,0,0.75);
     box-shadow: 16px 13px 15px -4px rgba(0,0,0,0.75);
-
-
     opacity: 0.99;
-
 }
-
-/*word-wrap: break-word;*/
-
 
 .row {
     display: flex;
@@ -36,7 +30,6 @@ h3 {
 
 .title {
     margin-left: 20px;
-
 }
 
 .nameModal {
@@ -55,15 +48,15 @@ h3 {
     line-height: 3vh;
     height: 3vh;
     width: 3vw;
-    border-radius: 20px;
+    border-radius: 5px;
     transition: background-color 0.3s linear;
     outline: none;
 }
 
 .closeButton:hover {
-    background-color: black;
+    background: #F6F6f6;
     color: white;
-    border-radius: 20px;
+    border-radius: 10px;
     cursor: pointer;
 }
 
@@ -71,11 +64,13 @@ h3 {
 .events {
 
 }
+
 .form {
     display: grid;
     margin: 0 7.5vw;
 
 }
+
 input {
     width: 55vw;
     height: 5vh;
@@ -83,21 +78,18 @@ input {
     border: 1px solid #cecece;
     background: #F6F6f6;
     border-radius: 8px;
-
     padding: 5px;
     resize: none;
-
 }
 
 .addButton {
     display: grid;
     justify-content: center;
-
     height: 5vh;
-
     background-color: white;
 
 }
+
 .addButton button {
     margin-top: 5px;
     background-color: white;

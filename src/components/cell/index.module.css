@@ -2,7 +2,6 @@
     line-height: 9vh;
 }
 
-
 .square {
     position: relative;
     background: #fff;
@@ -17,8 +16,6 @@
     text-align: center;
     width: 9vw;
 }
-
-
 
 .today {
     position: relative;
@@ -35,7 +32,7 @@
     width: 9vw;
 }
 
-.Count {
+.count {
     position: absolute;
     top: 0;
     right: 0;
@@ -111,7 +108,6 @@
     text-align: center;
     width: 9vw;
 }
-
 
 .preWeekend {
     background: white;

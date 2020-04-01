@@ -17,7 +17,8 @@ h1 {
 .monthNameTitle {
     padding-right: 10px;
 }
-.monhtName {
+
+.monthName {
     display: flex;
     align-items: center;
     flex-direction: column;

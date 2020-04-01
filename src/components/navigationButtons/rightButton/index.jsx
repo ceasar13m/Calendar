@@ -1,7 +1,10 @@
 import React, {Component} from "react";
-import s from "./rightButton.module.css"
+import s from "./index.module.css"
 
 
+/**
+ * Кнопка выбора следующего месяца
+ */
 class RightButton extends Component {
     constructor(props) {
         super(props);

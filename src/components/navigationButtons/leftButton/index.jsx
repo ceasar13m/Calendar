@@ -1,7 +1,10 @@
 import React, {Component} from "react";
-import s from "./leftButton.module.css"
+import s from "./index.module.css"
 
 
+/**
+ * Кнопка выбора предыдущего месяца
+ */
 class LeftButton extends Component {
     constructor(props) {
         super(props);

@@ -1,13 +1,13 @@
 import React from "react";
 import s from "./daysOfWeek.module.css"
-import DaysNameCell from "../cell/daysNameCell";
+import DaysNameCell from "./daysNameCell";
 
 
-
+/**
+ * Строка календаря с названиями дней недели
+ */
 class DaysOfTheWeek extends React.Component {
-
     render() {
-
         return (
             <div className={s.boardRow}>
                 <DaysNameCell value="Mon"/>

@@ -1,20 +1,23 @@
 import {addEvent, deleteEvent, getEvent, getEventsCounts} from "../services/network-service";
 
+
+/**
+ * Координация и синхронизация изменений в UI и BLL
+ */
 class DataController {
 
     constructor(App) {
-        this.App = App;
+        this.app = App;
         this.calendarState = {
             calendar: {
                 date: new Date()
             },
-
             events: new Map(),
             loadings: false,
             window: false,
             counts: []
         }
-        this.getCounts(this.calendarState.calendar.date);
+        this.getEventsCounts(this.calendarState.calendar.date);
     }
 
 
@@ -24,20 +27,16 @@ class DataController {
      * @returns {Promise<void>}
      */
     async addEvent(event) {
-        this.calendarState.loadings = true;
-        this.App.onEventsLoaderChanged({
-            loadings: this.calendarState.loadings,
-        });
-
+        this.showLoadingAnimation();
         await addEvent(event);
-
-        this.calendarState.loadings = false;
-        this.App.onEventsLoaderChanged({
-            loadings: this.calendarState.loadings,
-        });
-
-        this.calendarState.events.set(event.id, event);
-        this.App.onEventsChanged({
+        this.hideLoadingAnimation();
+        let events = this.calendarState.events;
+        events.set(event.id, event);
+        this.calendarState = {
+            ...this.calendarState,
+            events: events
+        };
+        this.app.onEventsChanged({
             events: this.calendarState.events
         });
     }
@@ -49,19 +48,16 @@ class DataController {
      * @returns {Promise<void>}
      */
     async deleteEvent(event) {
-        this.calendarState.loadings = true;
-        this.App.onEventsLoaderChanged({
-            loadings: this.calendarState.loadings,
-        });
+        this.showLoadingAnimation();
         await deleteEvent(event);
-
-        this.calendarState.loadings = false;
-        this.App.onEventsLoaderChanged({
-            loadings: this.calendarState.loadings,
-        });
-
-        this.calendarState.events.delete(event.id);
-        this.App.onEventsChanged({
+        this.hideLoadingAnimation();
+        let events = this.calendarState.events;
+        events.delete(event.id);
+        this.calendarState = {
+            ...this.calendarState,
+            events: events
+        };
+        this.app.onEventsChanged({
             events: this.calendarState.events
         });
 
@@ -69,48 +65,43 @@ class DataController {
 
 
     async showEventsWindow(date) {
-        this.calendarState.calendar.date = date;
-        this.App.onCalendarChanged({
+        this.calendarState = {
+            ...this.calendarState,
+            calendar: {date: date}
+        };
+        this.app.onCalendarChanged({
             calendar: this.calendarState.calendar
         });
-
-
-        this.calendarState.loadings = true;
-        this.App.onEventsLoaderChanged({
-            loadings: this.calendarState.loadings,
-        });
-
-
+        this.showLoadingAnimation();
         await this.getEvents();
-        this.App.onEventsChanged({
+        this.app.onEventsChanged({
             events: this.calendarState.events,
         });
-
-        this.calendarState.loadings = false;
-        this.App.onEventsLoaderChanged({
-            loadings: this.calendarState.loadings,
-        });
-
-
-        this.calendarState.window = true;
-        this.App.onWindowChanged({
+        this.hideLoadingAnimation();
+        this.calendarState = {
+            ...this.calendarState,
+            window: true
+        }
+        this.app.onWindowChanged({
             window: this.calendarState.window,
         });
-
-
     }
 
 
     async hideEventsWindow() {
-        this.calendarState.counts = [];
-        await this.getCounts(this.calendarState.calendar.date);
-
-        this.App.onCountsChanged({
+        this.calendarState = {
+            ...this.calendarState,
+            counts: []
+        }
+        await this.getEventsCounts(this.calendarState.calendar.date);
+        this.app.onCountsChanged({
             counts: this.calendarState.counts,
         });
-
-        this.calendarState.window = false;
-        this.App.onWindowChanged({
+        this.calendarState = {
+            ...this.calendarState,
+            window: false
+        }
+        this.app.onWindowChanged({
             window: this.calendarState.window,
         });
 
@@ -118,53 +109,72 @@ class DataController {
 
 
     async monthIncr() {
-        this.calendarState.calendar.date = new Date(
+        let date = new Date(
             this.calendarState.calendar.date.getFullYear(),
             this.calendarState.calendar.date.getMonth() + 1,
         );
-        await this.getCounts(this.calendarState.calendar.date);
-
-
+        this.calendarState = {
+            ...this.calendarState,
+            calendar: {date: date}
+        }
+        await this.getEventsCounts(this.calendarState.calendar.date);
+        this.app.onCalendarChanged({
+            calendar: this.calendarState.calendar
+        })
     }
 
     async monthDecr() {
-        this.calendarState.calendar.date = new Date(
+        let date = new Date(
             this.calendarState.calendar.date.getFullYear(),
             this.calendarState.calendar.date.getMonth() - 1,
         );
-
-        await this.getCounts(this.calendarState.calendar.date);
+        this.calendarState = {
+            ...this.calendarState,
+            calendar: {date: date}
+        }
+        this.app.onCalendarChanged({
+            calendar: this.calendarState.calendar
+        })
+        await this.getEventsCounts(this.calendarState.calendar.date);
 
     }
 
     async yearIncr() {
-        this.calendarState.calendar.date = new Date(
+        let date = new Date(
             this.calendarState.calendar.date.getFullYear() + 1,
             this.calendarState.calendar.date.getMonth()
         );
-
-        await this.getCounts(this.calendarState.calendar.date);
+        this.calendarState = {
+            ...this.calendarState,
+            calendar: {date: date}
+        }
+        this.app.onCalendarChanged({
+            calendar: this.calendarState.calendar
+        })
+        await this.getEventsCounts(this.calendarState.calendar.date);
     }
 
     async yearDecr() {
-        this.calendarState.calendar.date = new Date(
+        let date = new Date(
             this.calendarState.calendar.date.getFullYear() - 1,
             this.calendarState.calendar.date.getMonth()
         );
-
-
-        await this.getCounts(this.calendarState.calendar.date);
-
-
+        this.calendarState = {
+            ...this.calendarState,
+            calendar: {date: date}
+        }
+        this.app.onCalendarChanged({
+            calendar: this.calendarState.calendar
+        })
+        await this.getEventsCounts(this.calendarState.calendar.date);
     }
 
     async getEvents() {
         this.calendarState.events = new Map();
-
         await getEvent(this.calendarState.calendar.date)
             .then(response => response.json())
-            .then(resp => {
-                for (let event of resp.events) {
+            .then(json => {
+                for (let event of json.events) {
                     event.date = new Date(event.date);
                     this.calendarState.events.set(event.id, event);
                 }
@@ -174,39 +184,60 @@ class DataController {
     }
 
 
-    async getCounts(date) {
-        this.calendarState.loadings = true;
-        this.App.onEventsLoaderChanged({
-            loadings: this.calendarState.loadings,
-        });
-
+    async getEventsCounts(date) {
+        this.showLoadingAnimation();
         await getEventsCounts(date)
             .then(response => response.json())
-            .then(resp => {
-                for (let count of resp.counts) {
-                    count.date = new Date(count.date);
-                    this.calendarState.counts.push(count);
+            .then(json => {
+                this.hideLoadingAnimation();
+                let counts = json.counts.map(value => {
+                    value.date = new Date(value.date);
+                    return value;
+                });
+                this.calendarState = {
+                    ...this.calendarState,
+                    counts: [
+                        ...this.calendarState.counts,
+                        ...counts
+                    ]
                 }
+                this.app.onCountsChanged({
+                    counts: this.calendarState.counts,
+                });
             })
-            .catch(err => console.log(err));
+            .catch(err => {
+                this.hideLoadingAnimation();
+                console.log(err)
+            });
 
-        this.calendarState.loadings = false;
-        this.App.onEventsLoaderChanged({
-            loadings: this.calendarState.loadings,
-        });
 
-        this.App.onCountsChanged({
-            counts: this.calendarState.counts,
-        });
-
-        this.App.onCalendarChanged({
-            calendar: this.calendarState.calendar
-        });
     }
 
 
     getState() {
         return this.calendarState;
+    }
+
+
+    showLoadingAnimation() {
+        this.calendarState = {
+            ...this.calendarState,
+            loadings: true
+        }
+        this.app.onEventsLoaderChanged({
+            loadings: this.calendarState.loadings,
+        });
+    }
+
+
+    hideLoadingAnimation() {
+        this.calendarState = {
+            ...this.calendarState,
+            loadings: false
+        }
+        this.app.onEventsLoaderChanged({
+            loadings: this.calendarState.loadings,
+        });
     }
 
 }
