@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import s from "./right-button.module.css"
+import s from "./index.module.css"
 
 
 /**

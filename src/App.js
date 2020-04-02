@@ -1,12 +1,12 @@
 import React from 'react';
 import s from './App.module.css';
 import Calendar from "./components/calendar";
-import DateSelect from "./components/selectDate/date-select";
+import DateSelect from "./components/selectDate";
 import DataController from "./redux/dataController";
-import LeftButton from "./components/navigationButtons/leftButton/left-button";
-import RightButton from "./components/navigationButtons/rightButton/right-button";
-import EventsWindow from "./components/window/eventsWindow/event-window";
-import LoadLayer from "./components/window/loadLayer/load-layer";
+import LeftButton from "./components/navigationButtons/leftButton";
+import RightButton from "./components/navigationButtons/rightButton";
+import EventsWindow from "./components/window/eventsWindow";
+import LoadLayer from "./components/window/loadLayer";
 
 class App extends React.Component {
     constructor(props) {

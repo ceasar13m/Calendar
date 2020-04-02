@@ -1,5 +1,5 @@
 import React from "react";
-import s from "./days-of-week.module.css"
+import s from "./index.module.css"
 import DaysNameCell from "./days-name-sell";
 
 

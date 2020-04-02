@@ -107,11 +107,13 @@ class DataController {
 
     }
 
-
     async monthIncr() {
         let date = new Date(
             this.calendarState.calendar.date.getFullYear(),
             this.calendarState.calendar.date.getMonth() + 1,
+            this.calendarState.calendar.date.getDate(),
+            this.calendarState.calendar.date.getHours(),
+            this.calendarState.calendar.date.getMinutes()
         );
         this.calendarState = {
             ...this.calendarState,
@@ -127,6 +129,9 @@ class DataController {
         let date = new Date(
             this.calendarState.calendar.date.getFullYear(),
             this.calendarState.calendar.date.getMonth() - 1,
+            this.calendarState.calendar.date.getDate(),
+            this.calendarState.calendar.date.getHours(),
+            this.calendarState.calendar.date.getMinutes()
         );
         this.calendarState = {
             ...this.calendarState,
@@ -142,7 +147,10 @@ class DataController {
     async yearIncr() {
         let date = new Date(
             this.calendarState.calendar.date.getFullYear() + 1,
-            this.calendarState.calendar.date.getMonth()
+            this.calendarState.calendar.date.getMonth(),
+            this.calendarState.calendar.date.getDate(),
+            this.calendarState.calendar.date.getHours(),
+            this.calendarState.calendar.date.getMinutes()
         );
         this.calendarState = {
             ...this.calendarState,
@@ -157,7 +165,10 @@ class DataController {
     async yearDecr() {
         let date = new Date(
             this.calendarState.calendar.date.getFullYear() - 1,
-            this.calendarState.calendar.date.getMonth()
+            this.calendarState.calendar.date.getMonth(),
+            this.calendarState.calendar.date.getDate(),
+            this.calendarState.calendar.date.getHours(),
+            this.calendarState.calendar.date.getMinutes()
         );
         this.calendarState = {
             ...this.calendarState,
@@ -189,11 +200,12 @@ class DataController {
         await getEventsCounts(date)
             .then(response => response.json())
             .then(json => {
-                this.hideLoadingAnimation();
+
                 let counts = json.counts.map(value => {
                     value.date = new Date(value.date);
                     return value;
                 });
+                debugger
                 this.calendarState = {
                     ...this.calendarState,
                     counts: [
@@ -201,9 +213,11 @@ class DataController {
                         ...counts
                     ]
                 }
+                debugger
                 this.app.onCountsChanged({
                     counts: this.calendarState.counts,
                 });
+                this.hideLoadingAnimation();
             })
             .catch(err => {
                 this.hideLoadingAnimation();

@@ -1,6 +1,6 @@
 import React, {Component} from "react";
-import Cell from "./cell/cell";
-import DaysOfTheWeek from "./daysOfWeek/days-of-the-week";
+import Cell from "./cell";
+import DaysOfTheWeek from "./daysOfWeek";
 
 
 /**
@@ -32,7 +32,6 @@ class Calendar extends Component {
                     eventCount = count.count;
                 }
             }
-            debugger
             if (date.getDate() === today.getDate() &&
                 date.getMonth() === today.getMonth() &&
                 date.getFullYear() === today.getFullYear()) {

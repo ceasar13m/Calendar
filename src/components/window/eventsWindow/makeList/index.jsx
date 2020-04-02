@@ -1,5 +1,5 @@
 import React from "react";
-import s from "./make-list.module.css";
+import s from "./index.module.css";
 
 /**
  * Вывод событий

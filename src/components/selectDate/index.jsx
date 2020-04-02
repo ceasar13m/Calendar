@@ -1,7 +1,7 @@
 import React, {Component} from "react";
-import s from "./date-select.module.css"
-import MonthSelect from "./MonthSelect/month-select";
-import YearSelect from "./YearSelect/year-select";
+import s from "./index.module.css"
+import MonthSelect from "./MonthSelect";
+import YearSelect from "./YearSelect";
 
 /**
  * Изменение даты

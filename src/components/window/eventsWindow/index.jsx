@@ -1,7 +1,7 @@
 import React, {Component} from "react";
-import s from "./event-window.module.css"
-import MakeList from "./makeList/make-list";
-import BackGroundLayer from "../bgLayer/bg-layer";
+import s from "./index.module.css"
+import MakeList from "./makeList";
+import BackGroundLayer from "../bgLayer";
 
 /**
  * Окно событий

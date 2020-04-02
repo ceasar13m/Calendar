@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import s from "./year-select.module.css"
+import s from "./index.module.css"
 
 /**
  * Год и кнопки изменения года
